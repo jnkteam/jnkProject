@@ -1,0 +1,202 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+    <meta name="Generator" content="ECSHOP v2.7.3" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>用户中心_今纽扣商城  </title>
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/public.css"/>
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/user.css"/>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.more.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.json.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/transport.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/common.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/utils.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/shopping_flow.js"></script></head>
+<body class="body_bj">
+<header>
+    <div class="tab_nav">
+        <div class="header" style="background:#393a3f; opacity: 0.6">
+            <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="返回"></a></div>
+            <div class="h-mid" style="font-family: 楷体 ;color: white;">在线充值</div>
+            <div class="h-right">
+                <aside class="top_bar">
+                    <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script type="text/javascript" src="用户中心_今纽扣商城_files/mobile.js" ></script>
+<div class="goods_nav hid" id="menu">
+    <div class="Triangle">
+        <h2></h2>
+    </div>
+    <ul>
+        <li><a href="index.php"><span class="menu1"></span><i>首页</i></a></li>
+        <li><a href="catalog.php"><span class="menu2"></span><i>分类</i></a></li>
+        <li><a href="flow.php"><span class="menu3"></span><i>购物车</i></a></li>
+        <li style=" border:0;"><a href="user.php"><span class="menu4"></span><i>我的</i></a></li>
+    </ul>
+</div>
+<div id="tbh5v0">
+    <form name="formSurplus" method="post" action="user.php" onSubmit="return submitSurplus()">
+
+        <div class="recharge">
+            <dl class="re_one">
+                <dt style="line-height: 42px;width: 20%; font-size: 16px;font-weight: normal;">充值金额:</dt>
+                <dd><input type="text" name="amount" value="" /><font style=" font-size:14px; color:#666"> 元</font>
+                    <input name="ifcheck" type="hidden" id="ifcheck" value="0"><input name="user_note" type="hidden"  value="会员充值">
+                </dd>
+
+            </dl>
+            <!---dl class="re_one">
+            <dt>升级会员:</dt><br>
+            <input name="amount" type="radio" value="200" style="margin-left:20px;">
+            <font style=" font-size:14px; color:#666">高级合伙人200元(赠送288红包)</font><br>
+            <input name="amount" type="radio" value="3000" style="margin-left:20px;"><font style=" font-size:14px; color:#666">金牌合伙人 3000元(赠送3888红包)</font><br>
+            <input name="amount" type="radio" value="30000" style="margin-left:20px;"><font style=" font-size:14px; color:#666">事业合伙人 30000元</font>
+            </dl>
+            <!--dl class="re_two">
+            <dt>会员备注:</dt>
+            <dd><textarea name="user_note" rows="6"></textarea></dd>
+            </dl--->
+            <div class="re_st">
+                <h2>支付方式:</h2>
+                <span>
+                    <!--<input type="hidden" name="surplus_type" value="0" />
+                    <input type="hidden" name="rec_id" value="" />
+                    <input type="hidden" name="act" value="act_account" /-->
+                    <input style="background: #04be02;" type="submit" class="bnt_1" name="submit" value="立即支付" />
+                    <input style="background: #04be02;" type="reset" class="bnt_1" name="reset" value="在线支付" />
+                </span>
+            </div>
+        </div>
+    </form>
+    <script>
+        function goTop(){
+            $('html,body').animate({'scrollTop':0},600);
+        }
+    </script>
+</div>
+
+<script language="javascript">
+    $(function(){
+        $('input[type=text],input[type=password]').bind({
+            focus:function(){
+                $(".global-nav").css("display",'none');
+            },
+            blur:function(){
+                $(".global-nav").css("display",'flex');
+            }
+        });
+    })
+</script>
+<script type="text/javascript">
+    function set_null(area_rank) {
+        switch (area_rank) {
+            case '1'://国家
+                document.getElementById("province").innerHTML = "<option value='-1'>请选择</option>";
+                document.getElementById("city").innerHTML = "<option value='-1'>请选择</option>";
+                document.getElementById("district").innerHTML = "<option value='-1'>请选择</option>";
+                break;
+            case '2'://省份
+                document.getElementById("city").innerHTML = "<option value='-1'>请选择</option>";
+                document.getElementById("district").innerHTML = "<option value='-1'>请选择</option>";
+                break;
+            case '3'://城市
+                document.getElementById("district").innerHTML = "<option value='-1'>请选择</option>";
+                break;
+        }
+    }
+    function Ajax2(callback, region) {
+        //建立ajax对象
+        var request = false;
+        try {
+            request = new XMLHttpRequest();
+        } catch (trymicrosoft) {
+            try {
+                request = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (othermicrosoft) {
+                try {
+                    request = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (failed) {
+                    request = false;
+                }
+            }
+        }
+
+        var url = "user.php";
+
+        switch (callback) {
+                //获取国家
+            case 'country':
+                url = url + "?act=getCountries";
+                request.onreadystatechange = function() {
+                    if ((request.readyState == 4)&&(request.status == 200)) {
+                        var response = request.responseText;
+                        document.getElementById("country").innerHTML = response;
+                    }
+
+                }
+                request.open("GET", url, true);
+                request.send(null);
+                break;
+
+                //获取国家相应的省份
+            case 'province':
+                var country = document.getElementById("country").value;
+                url = url + "?act=getProvinces&country=" + country;
+                request.onreadystatechange = function() {
+                    if ((request.readyState == 4)&&(request.status == 200)) {
+                        var response = request.responseText
+                        document.getElementById("province").innerHTML = response;
+                        //document.getElementById("test").innerHTML = response;
+                    }
+
+                }
+                request.open("GET", url, true);
+                request.send(null);
+                break;
+
+                //获取相应国家相应省份的城市
+            case 'city':
+                var province = document.getElementById("province").value;
+                url = url + "?act=getCities&province=" + province;
+                request.onreadystatechange = function() {
+                    if ((request.readyState == 4)&&(request.status == 200)) {
+                        var response = request.responseText
+                        document.getElementById("city").innerHTML = response;
+                        Ajax('district');
+                    }
+
+                }
+                request.open("GET", url, true);
+                request.send(null);
+                break;
+
+                //获取相应国家相应省份的城市的地区
+            case 'district':
+                var city = document.getElementById("city").value;
+                url = url + "?act=getDistricts&city=" + city;
+                request.onreadystatechange = function() {
+                    if ((request.readyState == 4)&&(request.status == 200)) {
+                        var response = request.responseText
+                        document.getElementById("district").innerHTML = response;
+                    }
+
+                }
+                request.open("GET", url, true);
+                request.send(null);
+                break;
+        }
+    }
+</script>
+</body>
+</html>
