@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Generator" content="ECSHOP v2.7.3" />
+    <meta charset="UTF-8">
+    <title>我的钱包</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/user.css"/>
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/public.css"/>
+    <script src="用户中心_今纽扣商城_files/modernizr.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.json.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/transport.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/common.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/utils.js"></script>
+    <style>
+        nav{
+            height: 150px;
+            display: flex;
+        }
+        .wallet{
+            flex:1;
+            font-weight: 700;
+            font-size:18px;
+            font-family: 楷体;
+            padding-top:20px;
+            text-align: center;
+        }
+        .wallet em{
+            display: block;
+            float: left;
+            width: 100%;
+            height: 63px;
+        }
+        .wallet .sf-1{
+            background: url("./images/11.png") no-repeat center center;
+            background-size: auto 35px;
+        }
+        .wallet .wlt{
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background: #dee51e;
+            border:6px solid #e5a61e;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="tab_nav">
+        <div class="header" style="background:#393a3f;">
+            <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="返回"></a></div>
+            <div class="h-mid" style="font-family: 楷体";>零钱</div>
+            <div class="h-right">
+                <aside class="top_bar">
+                    <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="wallet">
+        <li class="wlt"><em class="sf-1"></em></li>
+        <li style="padding-top:14px"><span>安全</span></li>
+        <li><span>(支付密码)</span></li>
+    </div>
+</nav>
+</body>
+</html>

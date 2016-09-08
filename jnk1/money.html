@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Generator" content="ECSHOP v2.7.3" />
+    <meta charset="UTF-8">
+    <title>我的钱包</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/user.css"/>
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/public.css"/>
+    <script src="用户中心_今纽扣商城_files/modernizr.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.json.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/transport.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/common.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/utils.js"></script>
+    <style>
+        header{
+            background: #393a3f;
+        }
+        nav{
+            height: 200px;
+            background: #686f79;
+            margin:0;
+            padding:0;
+            display: flex;
+        }
+        nav em{
+            display: block;
+            float: left;
+            width: 100%;
+            height: 57px;
+        }
+        nav .sf-1{
+            background: url(./images/1.png) no-repeat center center;
+            background-size: auto 30px;
+        }
+        nav .bar-1{
+            background: url(./images/2.png) no-repeat center center;
+            background-size: auto 30px;
+        }
+        nav .bank-1{
+            background: url(./images/3.png) no-repeat center center;
+            background-size: auto 30px;
+        }
+        nav>div{
+            flex:1;
+            font-weight: 700;
+            font-size:16px;
+            font-family: 楷体;
+            text-align: center;
+            color: white;
+            padding-top:35px;
+        }
+        .service{
+            background: #f0eff5;
+        }
+        .service span{
+            height: 30px;
+            font: 16px/30px 楷体;
+            padding-left: 10px;
+            color: #530b21;
+        }
+        footer{
+            display: flex;
+            height: 120px;
+            text-align: center;
+            font: 14px 楷体;
+        }
+        footer a span{
+            font: 14px 楷体;
+        }
+        footer>div{
+            flex: 1;
+        }
+        footer>div{
+            border-right:1px solid #e0e0e0;
+            border-bottom:1px solid #e0e0e0;
+        }
+        footer>div:nth-child(3){
+            border-right:0 none;
+        }
+        footer em{
+            display: block;
+            float: left;
+            width: 100%;
+            height: 39px;
+        }
+        footer .icon1{
+            background: url(./images/5.png) no-repeat center center;
+            background-size: auto 30px;
+            padding-top:30px;
+        }
+        footer .icon2{
+            background: url(./images/4.png) no-repeat center center;
+            background-size: auto 30px;
+        }
+        footer .icon3{
+            background: url(./images/9.png) no-repeat center center;
+            background-size: auto 30px;
+        }
+        footer .icon4{
+            background: url(./images/6.png) no-repeat center center;
+            background-size: auto 30px;
+        }
+        footer .icon5{
+            background: url(./images/7.png) no-repeat center center;
+            background-size: auto 30px;
+        }
+        footer .icon6{
+            background: url(./images/8.png) no-repeat center center;
+            background-size: auto 30px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="tab_nav">
+        <div class="header" style="background:#393a3f;">
+            <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="返回"></a></div>
+            <div class="h-mid" style="font-family: 楷体";>我的钱包</div>
+            <div class="h-right">
+                <aside class="top_bar">
+                    <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="safe">
+        <li><em class="sf-1"></em></li>
+        <li style="padding-top:14px"><span>安全</span></li>
+        <li><span>(支付密码)</span></li>
+    </div>
+    <div class="bannar">
+        <li><em class="bar-1"></em></li>
+        <li ><span>余额</span></li>
+        <li><span>0.00</span></li>
+    </div>
+    <div class="bank">
+        <li><em class="bank-1"></em></li>
+        <li style="padding-top:12px"><span>银行卡</span></li>
+        <li><span>(结算信息)</span></li>
+    </div>
+</nav>
+
+<div class="service">
+    <span>金纽扣服务</span>
+</div>
+
+<footer>
+    <div class="one">
+        <a href="#"><em class="icon1"></em></a>
+        <a href="#"><span>充值</span></a>
+    </div>
+    <div class="two">
+        <a href="#"><em class="icon1 icon2"></em></a>
+        <a href="#"><span>提现</span></a>
+    </div>
+    <div class="three">
+        <a href="#"><em class="icon1 icon3"></em></a>
+        <a href="#"><span>转账</span></a>
+    </div>
+</footer>
+<footer>
+    <div class="one">
+        <a href="#"><em class="icon1 icon4"></em></a>
+        <span>红包</span>
+        <span></span>
+    </div>
+    <div class="two">
+        <a href="#"><em class="icon1 icon5"></em></a>
+        <span>积分</span>
+        <span></span>
+    </div>
+    <div class="three">
+        <a href="#"><em class="icon1 icon6"></em></a>
+       <span>金币</span>
+        <span></span>
+    </div>
+</footer>
+</body>
+</html>

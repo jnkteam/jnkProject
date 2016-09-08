@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://test.jnkmall.com/mobile/user.php?act=profile -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Generator" content="ECSHOP v2.7.3">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>用户中心_今纽扣商城  </title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="./用户中心_今纽扣商城_files/public.css">
+    <link rel="stylesheet" type="text/css" href="./用户中心_今纽扣商城_files/user.css">
+    <link rel="stylesheet" type="text/css" href="./用户中心_今纽扣商城_files/main.css">
+    <script type="text/javascript" src="./用户中心_今纽扣商城_files/jquery.js"></script>
+    <script type="text/javascript" src="./用户中心_今纽扣商城_files/jquery.more.js"></script>
+    <script type="text/javascript" src="./用户中心_今纽扣商城_files/jquery.json.js"></script>
+    <script type="text/javascript" src="./用户中心_今纽扣商城_files/transport.js"></script>
+    <script type="text/javascript" src="./用户中心_今纽扣商城_files/common.js"></script>
+    <script type="text/javascript" src="./用户中心_今纽扣商城_files/utils.js"></script>
+    <script type="text/javascript" src="./用户中心_今纽扣商城_files/shopping_flow.js"></script></head>
+<body class="body_bj">
+<header>
+    <div class="tab_nav">
+        <div class="header">
+            <div class="h-left"><a class="sb-back" href="http://test.jnkmall.com/mobile/user.php" title="返回"></a></div>
+            <div class="h-mid">信息修改</div>
+            <div class="h-right">
+                <aside class="top_bar">
+                    <div onclick="show_menu();$(&#39;#close_btn&#39;).addClass(&#39;hid&#39;);" id="show_more"><a href="javascript:;"></a> </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+<script type="text/javascript" src="./用户中心_今纽扣商城_files/mobile.js"></script>
+<div class="goods_nav hid" id="menu">
+    <div class="Triangle">
+        <h2></h2>
+    </div>
+    <ul>
+        <li><a href="http://test.jnkmall.com/mobile/index.php"><span class="menu1"></span><i>首页</i></a></li>
+        <li><a href="http://test.jnkmall.com/mobile/catalog.php"><span class="menu2"></span><i>分类</i></a></li>
+        <li><a href="http://test.jnkmall.com/mobile/flow.php"><span class="menu3"></span><i>购物车</i></a></li>
+        <li style=" border:0;"><a href="http://test.jnkmall.com/mobile/user.php"><span class="menu4"></span><i>我的</i></a></li>
+    </ul>
+</div>
+
+<!--整体的样式改动开始-->
+<div id="tbh5v0">
+    <!--添加的导航栏开始-->
+    <nav>
+        <ul class="table">
+            <li class="active" id="">会员头像</li>
+            <li class="">会员信息</li>
+            <li class="">账户结算信息</li>
+        </ul>
+    </nav>
+
+
+    <!--添加的导航栏结束-->
+
+    <div class="Personal">
+        <div id="tbh5v0">
+            <div class="innercontent1">
+                <form method="post" action="http://test.jnkmall.com/mobile/user.php" style="display: block"enctype="multipart/form-data" id="edit_profile">
+
+                    <div style="width:95%; margin:0 auto; display: flex;">
+                        <div style="height:150px; padding-left: 40px;line-height:150px;font-weight:normal; font-size:14px; color:#666; flex:1 ">会员头像</div>
+                        <div style="height:150px;flex: 1; padding-top: 15px;">
+                            <div class="control-group js_uploadBox">
+                                <div class="js_showBox "><img class="js_logoBox" src="./用户中心_今纽扣商城_files/user68.jpg" width="106px" height="106px"></div>
+                                <div class="btn-upload">
+                                    <a href="javascript:void(0);"><i class="icon-upload-alt"></i><span class="js_uploadText">上传</span>图片</a>
+                                    <input class="js_upFile" type="file" name="headimg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        .btn-upload {
+                            width: 106px;
+                            height: 32px;
+                            position: relative;
+                            margin-bottom: 10px;
+                        }
+                        .btn-upload a {
+                            display: block;
+                            width: 104px;
+                            line-height: 18px;
+                            padding: 6px 0;
+                            text-align: center;
+                            color: #4c4c4c;
+                            background: #fff;
+                            border: 1px solid #cecece;
+                        }
+                        .btn-upload input {
+                            width: 106px;
+                            height: 32px;
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            z-index: 1;
+                            filter: alpha(opacity=0);
+                            -moz-opacity: 0;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+                        .icon-upload {
+                            display: inline-block;
+                            width: 17px;
+                            height: 17px;
+                            background: url(./icons.png) -78px 0 no-repeat;
+                            vertical-align: middle;
+                            margin-right: 5px;
+                            background-position: -144px -24px;
+                        }
+
+                    </style>
+                    <script type="text/javascript" src="./用户中心_今纽扣商城_files/jquery.uploadView.js"></script>
+
+                    <script>
+                        $(".js_upFile").uploadView({
+                            uploadBox: '.js_uploadBox',//设置上传框容器
+                            showBox : '.js_showBox',//设置显示预览图片的容器
+                            width : 100, //预览图片的宽度，单位px
+                            height : 100, //预览图片的高度，单位px
+                            allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
+                            maxSize :2, //允许上传图片的最大尺寸，单位M
+                            success:function(e){
+                                $(".js_uploadText").text('更改');
+                                alert('图片上传成功');
+                            }
+                        });
+                    </script>
+
+
+                    <div style="clear:both"></div>
+
+
+                    <div class="field submit-btn">
+                        <input type="submit" value="确认修改" class="btn_big1">
+                    </div>
+                    <input type="hidden" name="act" value="act_edit_img">
+                </form>
+                <form method="post" action="http://test.jnkmall.com/mobile/user.php" style="display: none" id="edit_profile">
+
+                    <div style="clear:both"></div>
+                    <div style="width: 95%; height:5px;margin:0 auto;    border-bottom: 1px solid #eeeeee;"></div>
+                    <div style="clear:both"></div>
+                    <div class="name"><span>用户名</span>
+                        <input type="text" name="user_name" value="18201113487" placeholder="*用户名" class="c-f-text">
+                    </div>
+
+                    <div class="name"> <span>出生日期</span> <select name="birthdayYear"><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option><option value="1966">1966</option><option value="1967">1967</option><option value="1968">1968</option><option value="1969">1969</option><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option></select>&nbsp;<select name="birthdayMonth"><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>&nbsp;<select name="birthdayDay"><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select></div>
+                    <div class="name1"> <span>性　别</span>
+                        <ul style="padding-left: 5px;">
+                            <li class="on">
+                                <label for="sex0">
+                                    <input type="radio" name="sex" value="0" tabindex="2" class="radio" id="sex0" checked="true/">
+                                    保密</label>
+                            </li>
+                            <li>
+                                <label for="sex1">
+                                    <input type="radio" name="sex" value="1" tabindex="3" class="radio" id="sex1">
+                                    男</label>
+                            </li>
+                            <li>
+                                <label for="sex2">
+                                    <input type="radio" name="sex" value="2" tabindex="4" class="radio" id="sex2">
+                                    女</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="name">
+                        <label for="extend_field_5"> <span>手机</span>
+                            <input type="text" name="extend_field5" value="18201113487" id="extend_field_5" placeholder="*手机" class="c-f-text">
+                        </label>
+                    </div>
+                    <div class="address" style=" margin-left:26px;">
+                        <ul>
+                            <li>
+                                <!--
+                                <select style="display:none; width: 100px;"  name="country" onfocus="Ajax('country')" onchange="set_null('1')">
+                                <option value=''>--请选择--</option>
+                                                    <option value='1' >中国</option>
+                                                    </select>
+                                -->
+                                <input type="hidden" id="country" name="country" value="1">
+
+                                <select style="margin-top:20px; width: 38%;height:30px; float:left; margin-left: 3%" id="province" name="province" onchange="Ajax2(&#39;city&#39;)">
+                                    <option value="">--请选择--</option>
+                                    <option value="2">北京</option>
+                                    <option value="3">安徽</option>
+                                    <option value="4">福建</option>
+                                    <option value="5">甘肃</option>
+                                    <option value="6">广东</option>
+                                    <option value="7">广西</option>
+                                    <option value="8">贵州</option>
+                                    <option value="9">海南</option>
+                                    <option value="10">河北</option>
+                                    <option value="11">河南</option>
+                                    <option value="12">黑龙江</option>
+                                    <option value="13">湖北</option>
+                                    <option value="14">湖南</option>
+                                    <option value="15">吉林</option>
+                                    <option value="16">江苏</option>
+                                    <option value="17">江西</option>
+                                    <option value="18">辽宁</option>
+                                    <option value="19">内蒙古</option>
+                                    <option value="20">宁夏</option>
+                                    <option value="21">青海</option>
+                                    <option value="22">山东</option>
+                                    <option value="23">山西</option>
+                                    <option value="24">陕西</option>
+                                    <option value="25">上海</option>
+                                    <option value="26">四川</option>
+                                    <option value="27">天津</option>
+                                    <option value="28">西藏</option>
+                                    <option value="29">新疆</option>
+                                    <option value="30">云南</option>
+                                    <option value="31">浙江</option>
+                                    <option value="32">重庆</option>
+                                    <option value="33">香港</option>
+                                    <option value="34">澳门</option>
+                                    <option value="35">台湾</option>
+                                </select>
+
+                                <select style="margin-top:20px;width: 42%; height:30px; float:right; margin-right: 8%;" id="city" name="city" onchange="Ajax2(&#39;district&#39;)">
+                                    <option value="">--请选择--</option>
+                                </select>
+
+                                <select style="width: 89%; height:30px; margin-left: 3%;" id="district" name="district">
+                                    <option value="">--请选择--</option>
+                                </select>
+                            </li>
+                            <li>
+                                <input id="address" name="address" type="text" style="width: 88%; height:30px; margin-left:3%;" value="">
+                            </li>
+                            <div class="required-notice fl"><i class="notice-icon"></i><span class="notice-text address-notice"></span></div>
+                        </ul>
+                    </div>
+
+
+                    <!--
+                    <div class="name">
+                      <label for="email_ep"> <span>邮箱</span>
+                        <input name="email" value="" id="email_ep" placeholder="*电子邮件地址" type="text" />
+                      </label>
+                    </div>
+                    -->
+                    <div class="field submit-btn">
+                        <input type="submit" value="确认修改" class="btn_big1">
+                    </div>
+                    <input type="hidden" name="act" value="act_edit_profile">
+                </form>
+
+                <form method="post" action="http://test.jnkmall.com/mobile/user.php" style="display: none" id="edit_profile">
+                    <div class="name"><span style="float:left;">开户银行</span>
+                        <ul style="float:left;overflow:hidden;width:70%;margin:0;padding:0;">
+                            <li>
+                                <select style=" " id="bank" name="bank">
+                                    <option value="">--请选择--</option>
+                                    <option value="1">中国银行</option>
+                                    <option value="2">中国建设银行</option>
+                                    <option value="3">中国工商银行</option>
+                                    <option value="4">中国农业银行</option>
+                                    <option value="5">中国交通银行</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="name"><span>具体支行</span>
+                        <input type="text" name="bank_name" value="" placeholder="*具体支行" class="c-f-text">
+                    </div>
+                    <div class="name"><span>开户姓名</span>
+                        <input type="text" name="account_name" value="" placeholder="*银行户名" class="c-f-text">
+                    </div>
+                    <div class="name"><span>银行卡号</span>
+                        <input type="text" name="account_number" value="" placeholder="*银行账号" class="c-f-text">
+                    </div>
+
+                    <input type="hidden" name="act" value="act_update_bank">
+
+                    <div class="field submit-btn">
+                        <input type="submit" value="确认修改" class="btn_big1">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+<!--tab栏切换开始-->
+    <script>
+       $(function () {
+           //注册click事件
+           $('.table>li').click(function () {
+               //让当前的li添加active类，排他
+               $(this).addClass('active').siblings().removeClass('active')
+               //让对应下标的div添加main类
+               var index = $(this).index()
+               $('.Personal>#tbh5v0>.innercontent1>form').eq(index).css("display","block").siblings().css("display","none")
+               // $('.Personal>#tbh5v0>div').removeClass('main')
+               // $('.Personal>#tbh5v0>div').eq(index).removeClass('main')
+           })
+       })
+    </script>
+    <!--tab栏切换结束-->
+<!--整体的样式改动结束-->
+    <script type="text/javascript">
+        var bonus_sn_empty = "请输入您要添加的红包号码！";
+        var bonus_sn_error = "您输入的红包号码格式不正确！";
+        var email_empty = "请输入您的电子邮件地址！";
+        var email_error = "您输入的电子邮件地址格式不正确！";
+        var old_password_empty = "请输入您的原密码！";
+        var new_password_empty = "请输入您的新密码！";
+        var confirm_password_empty = "请输入您的确认密码！";
+        var both_password_error = "您现两次输入的密码不一致！";
+        var msg_blank = "不能为空";
+        var no_select_question = "- 您没有完成密码提示问题的操作";
+    </script>
+
+
+    <script>
+        $('.name1 ul li').click(function(){
+            $(this).find("input").attr("checked","checked");
+            $('.name1 ul li').removeClass("on");
+            $(this).addClass("on");
+        })
+    </script>
+
+
+
+
+
+</div>
+
+<script language="javascript">
+    $(function(){
+        $('input[type=text],input[type=password]').bind({
+            focus:function(){
+                $(".global-nav").css("display",'none');
+            },
+            blur:function(){
+                $(".global-nav").css("display",'flex');
+            }
+        });
+    })
+</script>
+<script type="text/javascript">
+    function set_null(area_rank) {
+        switch (area_rank) {
+            case '1'://国家
+                document.getElementById("province").innerHTML = "<option value='-1'>请选择</option>";
+                document.getElementById("city").innerHTML = "<option value='-1'>请选择</option>";
+                document.getElementById("district").innerHTML = "<option value='-1'>请选择</option>";
+                break;
+            case '2'://省份
+                document.getElementById("city").innerHTML = "<option value='-1'>请选择</option>";
+                document.getElementById("district").innerHTML = "<option value='-1'>请选择</option>";
+                break;
+            case '3'://城市
+                document.getElementById("district").innerHTML = "<option value='-1'>请选择</option>";
+                break;
+        }
+    }
+    function Ajax2(callback, region) {
+        //建立ajax对象
+        var request = false;
+        try {
+            request = new XMLHttpRequest();
+        } catch (trymicrosoft) {
+            try {
+                request = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (othermicrosoft) {
+                try {
+                    request = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (failed) {
+                    request = false;
+                }
+            }
+        }
+
+        var url = "user.php";
+
+        switch (callback) {
+                //获取国家
+            case 'country':
+                url = url + "?act=getCountries";
+                request.onreadystatechange = function() {
+                    if ((request.readyState == 4)&&(request.status == 200)) {
+                        var response = request.responseText;
+                        document.getElementById("country").innerHTML = response;
+                    }
+
+                }
+                request.open("GET", url, true);
+                request.send(null);
+                break;
+
+                //获取国家相应的省份
+            case 'province':
+                var country = document.getElementById("country").value;
+                url = url + "?act=getProvinces&country=" + country;
+                request.onreadystatechange = function() {
+                    if ((request.readyState == 4)&&(request.status == 200)) {
+                        var response = request.responseText
+                        document.getElementById("province").innerHTML = response;
+                        //document.getElementById("test").innerHTML = response;
+                    }
+
+                }
+                request.open("GET", url, true);
+                request.send(null);
+                break;
+
+                //获取相应国家相应省份的城市
+            case 'city':
+                var province = document.getElementById("province").value;
+                url = url + "?act=getCities&province=" + province;
+                request.onreadystatechange = function() {
+                    if ((request.readyState == 4)&&(request.status == 200)) {
+                        var response = request.responseText
+                        document.getElementById("city").innerHTML = response;
+                        Ajax('district');
+                    }
+
+                }
+                request.open("GET", url, true);
+                request.send(null);
+                break;
+
+                //获取相应国家相应省份的城市的地区
+            case 'district':
+                var city = document.getElementById("city").value;
+                url = url + "?act=getDistricts&city=" + city;
+                request.onreadystatechange = function() {
+                    if ((request.readyState == 4)&&(request.status == 200)) {
+                        var response = request.responseText
+                        document.getElementById("district").innerHTML = response;
+                    }
+
+                }
+                request.open("GET", url, true);
+                request.send(null);
+                break;
+        }
+    }
+</script>
+
+</body></html>
