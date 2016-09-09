@@ -10,7 +10,7 @@ html对应的页面信息：
     recharge.html---余额充值
     success.html ---操作成功
     wallet.html  ---我的零钱
-
+    accounts.html---确认转账信息
 
 
 ###
