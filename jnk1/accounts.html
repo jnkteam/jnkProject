@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Generator" content="ECSHOP v2.7.3" />
+    <meta charset="UTF-8">
+    <title>确认转账信息</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/user.css"/>
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/public.css"/>
+    <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/example.css">
+    <script src="用户中心_今纽扣商城_files/modernizr.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.json.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/transport.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/common.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/utils.js"></script>
+    <style>
+        .button{
+            margin-top: 20px;
+        }
+        .weui_btn+.weui_btn {
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="tab_nav">
+        <div class="header" style="background:#393a3f; opacity: 0.6">
+            <div class="h-left"><a class="sb-back" href="javascript:history.back(-1)" title="返回"></a></div>
+            <div class="h-mid" style="font-family: 楷体 ;color: white;">确认转账信息</div>
+            <div class="h-right">
+                <aside class="top_bar">
+                    <div onClick="show_menu();$('#close_btn').addClass('hid');" id="show_more"><a href="javascript:;"></a> </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="weui_cells weui_cells_form" >
+    <div class="weui_cell" >
+        <div class="weui_cell_hd"><label class="weui_label">转账给：</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number"  placeholder="">
+        </div>
+    </div>
+    <div class="weui_cell" >
+        <div class="weui_cell_hd"><label class="weui_label">付款金额：</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" pattern="[0-9]*" placeholder="">
+        </div>
+    </div>
+    <div class="weui_cell" >
+        <div class="weui_cell_hd"><label class="weui_label">备注：</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="">
+        </div>
+    </div>
+    <div class="weui_cell" >
+        <div class="weui_cell_hd"><label class="weui_label">通知对方：</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="">
+        </div>
+    </div>
+</div>
+<div class="weui_cells_title">转账方式</div>
+<div class="weui_cells weui_cells_radio" style="display: flex">
+    <label class="weui_cell weui_check_label" for="x11" style="flex: 1;">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>余额</p>
+        </div>
+        <div class="weui_cell_ft">
+            <input type="radio" class="weui_check" name="radio1" id="x11">
+            <span class="weui_icon_checked"></span>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="x12" style="flex: 1;">
+
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>金币</p>
+        </div>
+        <div class="weui_cell_ft">
+            <input type="radio" name="radio1" class="weui_check" id="x12" checked="checked">
+            <span class="weui_icon_checked"></span>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="x13" style="flex: 1;">
+
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>积分</p>
+        </div>
+        <div class="weui_cell_ft">
+            <input type="radio" name="radio1" class="weui_check" id="x13" checked="checked">
+            <span class="weui_icon_checked"></span>
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label" for="x14" style="flex: 1;">
+
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>红包</p>
+        </div>
+        <div class="weui_cell_ft">
+            <input type="radio" name="radio1" class="weui_check" id="x14" checked="checked">
+            <span class="weui_icon_checked"></span>
+        </div>
+    </label>
+</div>
+<div class="button" >
+    <div class="bd spacing" id="btn" style="display: flex;">
+        <button class="weui_btn weui_btn_primary" style="flex: 1;"> 充值</button>
+        <button class="weui_btn weui_btn_default" style="flex: 1;"> 提现</button>
+    </div>
+</div>
+</body>
+</html>
