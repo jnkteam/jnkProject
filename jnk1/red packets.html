@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Generator" content="ECSHOP v2.7.3" />
+    <meta charset="UTF-8">
+    <title>红包明细</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="./用户中心_今纽扣商城_files/user.css"/>
+    <link rel="stylesheet" type="text/css" href="./用户中心_今纽扣商城_files/public.css"/>
+    <link rel="stylesheet" type="text/css" href="./用户中心_今纽扣商城_files/weui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./用户中心_今纽扣商城_files/example.css"/>
+    <script src="用户中心_今纽扣商城_files/modernizr.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.json.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/transport.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/common.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/utils.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="weui_cells_title"style="overflow: hidden">
+    <li style="float: left;">xxxx年xx月</li>
+    <li style="float: right;">消费：￥00.00</li>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">$00.00</div>
+    </div>
+</div>
+<div id="list"></div>
+
+<div class="weui-infinite-scroll">
+    <div class="infinite-preloader"></div><!-- 菊花 -->
+    正在加载... <!-- 文案，可以自行修改 -->
+</div>
+
+<script>
+    var loading = false;  //状态标记
+    $(document.body).infinite(100).on("infinite", function() {
+        if(loading) return;
+        loading = true;
+        setTimeout(function() {
+            $("#list").append("<p> 我是新加载的内容 </p>");
+            loading = false;
+        }, 1500);   //模拟延迟
+    });
+</script>
+</body>
+</html>
