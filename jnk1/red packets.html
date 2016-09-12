@@ -17,7 +17,54 @@
     <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.json.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/transport.js"></script>
     <script type="text/javascript" src="用户中心_今纽扣商城_files/common.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/utils.js"></script>
     <style>
-
+        .loading {
+            width: 80px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+        .loading span {
+            display: inline-block;
+            width: 8px;
+            height: 100%;
+            border-radius: 4px;
+            background: lightgreen;
+            -webkit-animation: load 1s ease infinite;
+            animation: load 1s ease infinite;
+        }
+        .loading span:nth-child(2) {
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+        .loading span:nth-child(3) {
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+        }
+        .loading span:nth-child(4) {
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+        .loading span:nth-child(5) {
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+        }
+        @-webkit-keyframes load {
+            0%, 100% {
+                height: 40px;
+                background: lightgreen;
+            }
+            50% {
+                height: 70px;
+                margin: -15px 0;
+                background: lightblue;
+            }
+        }
+        .weui_cell_bd p:nth-child(2),p:nth-child(3){
+            font-size:14px;
+            color: #666;
+            padding-left:10px;
+            padding-top:5px;
+        }
     </style>
 </head>
 <body>
@@ -32,7 +79,7 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div class="weui_cells">
@@ -42,7 +89,7 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div class="weui_cells">
@@ -52,7 +99,7 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div class="weui_cells">
@@ -62,7 +109,7 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div class="weui_cells">
@@ -72,7 +119,7 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div class="weui_cells">
@@ -82,7 +129,22 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
+    </div>
+</div>
+
+<div class="weui_cells_title"style="overflow: hidden">
+    <li style="float: left;">xxxx年xx月</li>
+    <li style="float: right;">消费：￥00.00</li>
+</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字</p>
+            <p>标题文字</p>
+            <p>标题文字</p>
+        </div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div class="weui_cells">
@@ -92,7 +154,7 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div class="weui_cells">
@@ -102,7 +164,7 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div class="weui_cells">
@@ -112,7 +174,7 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div class="weui_cells">
@@ -122,36 +184,23 @@
             <p>标题文字</p>
             <p>标题文字</p>
         </div>
-        <div class="weui_cell_ft">$00.00</div>
-    </div>
-</div>
-<div class="weui_cells">
-    <div class="weui_cell">
-        <div class="weui_cell_bd weui_cell_primary">
-            <p>标题文字</p>
-            <p>标题文字</p>
-            <p>标题文字</p>
-        </div>
-        <div class="weui_cell_ft">$00.00</div>
+        <div class="weui_cell_ft">￥00.00</div>
     </div>
 </div>
 <div id="list"></div>
 
-<div class="weui-infinite-scroll">
-    <div class="infinite-preloader"></div><!-- 菊花 -->
-    正在加载... <!-- 文案，可以自行修改 -->
+<div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 </div>
 
 <script>
-    var loading = false;  //状态标记
-    $(document.body).infinite(100).on("infinite", function() {
-        if(loading) return;
-        loading = true;
-        setTimeout(function() {
-            $("#list").append("<p> 我是新加载的内容 </p>");
-            loading = false;
-        }, 1500);   //模拟延迟
-    });
+   $(function () {
+
+   })
 </script>
 </body>
 </html>
