@@ -9,13 +9,13 @@
 .com_top{ width:100%; overflow:hidden;position:relative; z-index:9999; background:#FFF;}
 .com_top em{ width:60px; display:block; height:60px; bottom:10px; left:40%; position:absolute;}
 .com_top em img{ display:block; width:100%; height:auto; border-radius: 50%;}
-.com_top i{display:block; height:25px; bottom:20px;position:absolute; font-size:12px; line-height:25px; color:#FFF; font-style:normal; right:-10px; padding-left:10px; padding-right:20px;background-color:rgba(27,27,27,0.3);border-radius:25px; }
+.com_top i{display:block; height:25px; bottom:27px;position:absolute; font-size:12px; line-height:25px; color:#FFF; font-style:normal; right:-10px; padding-left:10px; padding-right:20px;background-color:rgba(27,27,27,0.3);border-radius:25px; }
 .com_top dl{width:100%; height:110px;background:#FF5101 ;}
 .com_top dl dt{ width:78%; height:45px; float:right;}
 .com_top dl dt a{ display:block; width:60px; height:25px; text-indent:20px; font-size:14px; line-height:25px; color:#FFF; float:right; margin-right:5px; margin-top:8px; background:url(../images/user/shehzi.png) no-repeat left center;background-size: auto 20px;}
 
 .com_top dl dd{ width:78%; height:25px; float:right;}
-.com_top dl dd span{ display:block; float:left; font-size:18px; color:#FFF; line-height:25px;background:url(../images/user/geren.png) no-repeat right center;background-size: auto 25px; padding-right:25px; }
+.com_top dl dd span{ display:block; float:left; font-size:18px; color:#FFF; line-height:25px; background:url(../images/user/geren.png) no-repeat right center;background-size: auto 25px; padding-right:25px; }
 
 
 .com_top ul{ width:80%; height:40px; float:right; padding-bottom:10px; padding-top:10px;}
@@ -67,8 +67,8 @@
 
 .Wallet em{ display:block; float:left; width:15%; height:50px;}
 
-.Icon1{ background:url(../images/user/Icon1.png) no-repeat center center;background-size: auto 30px;}
-.Icon2{ background:url(../images/user/Icon2.png) no-repeat center center;background-size: auto 30px;}
+.Icon1{ background:url(../images/user/Icon6.png) no-repeat center center;background-size: auto 30px;}
+.Icon2{ background:url(../images/user/Icon3.png) no-repeat center center;background-size: auto 30px;}
 .Icon3{ background:url(../images/user/Icon3.png) no-repeat center center;background-size: auto 30px;}
 .Icon4{ background:url(../images/user/Icon4.png) no-repeat center center;background-size: auto 30px;}
 .Icon5{ background:url(../images/user/Icon5.png) no-repeat center center;background-size: auto 30px;}
@@ -343,14 +343,14 @@
 .re_two dd textarea{ width:80%; height:60px; border:1px solid #dddddd; font-size:14px; line-height:20px; color:#999;-webkit-appearance: none;border-radius:0;}
 
 .re_st{ width:95%; margin:auto; overflow:hidden; padding-top:20px; padding-bottom:20px;}
-.re_st h2{ width:100%; height:40px; font-size:16px; line-height:40px; color:#666; font-weight:normal}
+.re_st h2{ width:100%; height:40px; font-size:18px; line-height:40px; color:#666; font-weight:normal}
 .re_st dl{ width:100%; overflow:hidden;}
 
-.re_st dl dt{ width:100%; overflow:hidden; margin-bottom:5px; }
+.re_st dl dt{ width:100%; overflow:hidden; margin-bottom:5px; margin-left: 35px;}
 .re_st dl dt i{ width:30px; display:block; float:left;}
 
 .re_st dl dt i input {  padding-left: 22px; display: block;
-    -webkit-appearance: none;border:none;}
+    border:none;}
 a.bnt_1{ text-align:center; color:#fff}
 .re_st dl dt em{display:block; float:left; font-size:14px; line-height:18px; color:black; font-style:normal;  margin-top:5px;}
 .re_st dl dt span{display:block; float:left; font-size:13px; line-height:20px; color:#999; font-style:normal; margin-left:10px;}
