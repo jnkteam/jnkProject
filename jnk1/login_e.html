@@ -20,39 +20,40 @@
             -webkit-transition: all 0.1s ease-in-out;
             -moz-transition: all 0.1s ease-in-out;
             transition: all 0.1s ease-in-out;
-               width: 60px;
+            width: 60px;
             display: block;
             height: 60px;
             bottom: 10px;
             left: 42%;
             position: absolute;
             top:50px;
-            z-index: 100001111;
+            z-index: 10000;
             border-radius: 50%;
             display: block;
         }
         .com_top{
+            width:100%;
+            height: 100%;
             height: 120px;
-            background: #FF5101;
-
+            background: url("./images/beijing.jpg");
+            -webkit-animation:yidong 2s ease-in-out;
         }
         .com_top img{
             position: relative;
         }
         .icon{
-             opacity: 1;
             position:fixed;
             width: 100%;
             height: 40px;
             display: flex;
             -webkit-justify-content: space-around;
             z-index: 10000;
-            border-bottom: 1px solid red;
+
         }
          .icon .icon1{
             flex: 4;
             height: 50px;
-            background: url("./images/user/QR_Code.png") no-repeat;
+            background: url("images/user/QR_Code.png") no-repeat;
             background-size: auto 35px;
             margin-left:0%;
             box-sizing: border-box;
@@ -72,10 +73,10 @@
         /*动画帧*/
         @keyframes yidong {
             0%{
-                transform: translate(0,0) scale(1) ;
+                 -webkit-filter:blur(3px);
             }
             100%{
-                transform: translate(-10px,-10px) scale(0.2);
+                -webkit-filter:blur(0);
             }
         }
         /*钱包部分开始*/
@@ -163,16 +164,141 @@
         .Order{
             margin-bottom: 10px;
         }
+        #goodcover {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 133%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: 0.50;
+            filter: alpha(opacity=80);
+        }
+        #code {
+            width: 300px;
+            height: 500px;
+            background-color: #fff;
+            padding: 10px;
+            position: absolute;
+            display: none;
+            left: 45%;
+            z-index: 10001;
+        }
+        .close1 {
+            width: 300px;
+            height: 60px;
+        }
+        #closebt {
+            float: right;
+        }
+        #closebt img {
+            width: 20px;
+        }
+        .goodtxt {
+            text-align: center;
+        }
+        .goodtxt p {
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            color: #000;
+            font-weight: 600;
+        }
+        .code-img {
+            width: 250px;
+            margin: 30px auto 0 auto;
+            padding: 10px;
+        }
+        .code-img img {
+            width: 240px;
+        }
+
     </style>
     <!--尊敬的会员结束-->
 </head>
 <body class="body_bj" id="body_bj">
 <div style="clear:both"></div>
- <div class="icon" style="background:#ff5101">
-                <li class="icon1"><a href="#"></a></li>
+<div id="goodcover"></div>
+<div id="code">
+    <div class="close1"><a href="javascript:void(0)" id="closebt"><img src="images/close.gif"></a></div>
+    <div class="goodtxt">
+        <p>微信扫一扫</p>
+        <p>将您的团购分享到朋友圈</p>
+        <p>让更多朋友知道哦~</p>
+    </div>
+    <div class="code-img"> <img id="ewmsrc"  src="images/erweima_png.png"/></div>
+</div>
+
+
+ <div class="icon" style="background: blue;     background-image: radial-gradient( 200px at 50px 60px, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) );">
+                <li class="icon1" id="ClickMe"><a href="#"></a></li>
                 <li class="icon2"><a style="color: white;" href="#">尊敬的会员</a></li>
                 <li class="icon3"><a href="#"></a></li>
 </div>
+
+<script>
+    $(function() {
+        //alert($(window).height());
+        $('#ClickMe').click(function() {
+            $('#code').center();
+            $('#goodcover').show();
+            $('#code').fadeIn();
+        });
+        $('#closebt').click(function() {
+            $('#code').hide();
+            $('#goodcover').hide();
+        });
+        $('#goodcover').click(function() {
+            $('#code').hide();
+            $('#goodcover').hide();
+        });
+        jQuery.fn.center = function(loaded) {
+            var obj = this;
+            body_width = parseInt($(window).width());
+            body_height = parseInt($(window).height());
+            block_width = parseInt(obj.width());
+            block_height = parseInt(obj.height());
+            left_position = parseInt((body_width / 2) - (block_width / 2) + $(window).scrollLeft());
+            if (body_width < block_width) {
+                left_position = 0 + $(window).scrollLeft();
+            };
+            top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
+            if (body_height < block_height) {
+                top_position = 0 + $(window).scrollTop();
+            };
+
+            if (!loaded) {
+
+                obj.css({
+                    'position': 'absolute'
+                });
+                obj.css({
+                    'top': ($(window).height() - $('#code').height()) * 0.5,
+                    'left': left_position
+                });
+                $(window).bind('resize', function() {
+                    obj.center(!loaded);
+                });
+                $(window).bind('scroll', function() {
+                    obj.center(!loaded);
+                });
+
+            } else {
+                obj.stop();
+                obj.css({
+                    'position': 'absolute'
+                });
+                obj.animate({
+                    'top': top_position
+                }, 200, 'linear');
+            }
+        }
+
+    })
+</script>
 <div style="clear:both"></div>
 <em><img id="thumbImg" src="用户中心_今纽扣商城_files/user68.jpg"></em>
 <div class="com_top border_bottm">
