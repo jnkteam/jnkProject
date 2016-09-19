@@ -11,11 +11,17 @@ nav .table{
     background-color: #FFF;
     height: 40px;
     min-height: 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     padding-top:5px;
     padding-bottom: 5px;
 }
 nav .table li{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
     flex: 1;
     line-height: 40px;
     font-size: 16px;
@@ -23,7 +29,6 @@ nav .table li{
     display: block;
     border-bottom: 2px #E7E7E7 solid;
     height: 40px;
-    float: left;
     text-align: center;
     cursor: pointer;
 }
