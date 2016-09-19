@@ -42,14 +42,20 @@
         .icon{
             width: 100%;
             height: 40px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
             -webkit-justify-content: space-around;
             z-index: 10000;
             position: fixed;
         }
          .icon .icon1{
-            flex: 1;
-            height: 50px;
+             -webkit-box-flex: 1;
+             -ms-flex: 1;
+             -webkit-flex: 1;
+             flex: 1;
+             height: 50px;
              margin-top:8px;
              margin-left: 5px;
             background: url("images/user/m.png") no-repeat;
@@ -57,14 +63,20 @@
             box-sizing: border-box;
         }
          .icon .icon2{
-            flex:2;
-            color: white;
+             -webkit-box-flex: 2;
+             -ms-flex: 2;
+             -webkit-flex: 2;
+             flex: 2;
+             color: white;
             font-family:微软雅黑;
              text-align: center;
         }
          .icon .icon3{
-            flex: 1;
-            height: 50px;
+             -webkit-box-flex: 1;
+             -ms-flex: 1;
+             -webkit-flex: 1;
+             flex: 1;
+             height: 50px;
              margin-top:7px;
             background: url("./images/user/guanbi.png") right 2px  no-repeat;
             background-size: auto 22px;
@@ -85,12 +97,18 @@
         .money{
             height: 180px;
             background: white;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
 
         }
         .money .money1{
-            flex:1;
-           /* text-align: center;*/
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            /* text-align: center;*/
             border-right:1px solid #efefef;
             text-align: center;
             line-height:1.2;
@@ -105,40 +123,58 @@
             color: #3bb2d4;
 
         }
-        .money .money2{
+      /*  .money .money2{
             height: 180px;
-            flex:2;
-            display: inline-flex;
+            -webkit-box-flex: 2;
+            -ms-flex: 2;
+            -webkit-flex: 2;
+            flex: 2;
+            !*display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: -webkit-inline-flex;
+            display: inline-flex;*!
             text-align: center;
             line-height:1.2;
             font-size:14px;
-        }
-        .money2 .one{
-            flex:1;
+        }*/
+        .money .one{
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
             border-right:1px solid #efefef;
+            text-align: center;
+            line-height:1.2;
+            font-size:14px;
         }
         .money2 .one .tgq,.yhq{
             height: 90px;
             padding-top:5px;
             box-sizing: border-box;
         }
-        .money2 .two{
-            flex:1;
+        .money .two{
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            text-align: center;
+            line-height:1.2;
+            font-size:14px;
         }
-        .money2 .two .jf,.yxy{
+        .money .two .jf,.yxy{
             height: 90px;
             padding-top:5px;
             box-sizing: border-box;
         }
-       .money2 div{
+       .one div,.tow div{
            text-align: center;
        }
-       .money2 .yhq,.jf{
+       .money .yhq,.jf{
            border-bottom:1px solid #efefef;
            box-sizing: border-box;
 
        }
-        .money2 em{
+        .money em{
             display: block;
             float: left;
             width: 100%;
@@ -336,34 +372,33 @@
                     <li><a href="#">我的钱包</a></li>
                     <li><a href="#"><span>充值</span><span>提现</span><span>明细</span></a></li>
             </div>
-            <div class="money2">
-                <div class="one">
-                    <div class="yhq">
-                        <li><a href="#"><em class="icon2"></em></a></li>
-                        <li><a href="">金额</a></li>
-                        <li><a href=""><span>2张可用</span></a></li>
-                    </div>
-                    <div class="tgq">
-                        <li> <a href="#"><em class="icon6"></em></a></li>
-                        <li><a href="#">金币</a></li>
-                        <li><a href="#"><span>0张可用</span></a></li>
-                    </div>
-
+            <!--<div class="money2">-->
+            <div class="one">
+                <div class="yhq">
+                    <li><a href="#"><em class="icon2"></em></a></li>
+                    <li><a href="">金额</a></li>
+                    <li><a href=""><span>2张可用</span></a></li>
                 </div>
-                    <div class="two">
-                        <div class="jf">
+                <div class="tgq">
+                    <li> <a href="#"><em class="icon6"></em></a></li>
+                    <li><a href="#">金币</a></li>
+                    <li><a href="#"><span>0张可用</span></a></li>
+                </div>
+            </div>
+            <div class="two">
+                <div class="jf">
                             <li><a href="#"><em class="icon5"></em></a></li>
                             <li><a href="">积分</a></li>
                             <li><a href=""><span>2张可用</span></a></li>
                         </div>
-                        <div class="yxy">
-                            <li><a href="#"><em class="icon4"></em></a></li>
-                            <li><a href="">红包</a></li>
-                            <li><a href=""><span>2张可用</span></a></li>
-                        </div>
-                    </div>
-
+                <div class="yxy">
+                    <li><a href="#"><em class="icon4"></em></a></li>
+                    <li><a href="">红包</a></li>
+                    <li><a href=""><span>2张可用</span></a></li>
+                </div>
             </div>
+
+           <!-- </div>-->
 
         </div>
 
