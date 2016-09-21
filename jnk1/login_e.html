@@ -1,22 +1,24 @@
 <!DOCTYPE html >
 <html>
 <head>
-    <meta name="Generator" content="ECSHOP v2.7.3" />
+    <meta name="Generator" content="ECSHOP v2.7.3"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>用户中心_今纽扣商城  </title>
-    <meta name="Keywords" content="" />
-    <meta name="Description" content="" />
+    <title>用户中心_今纽扣商城 </title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/user.css"/>
     <link rel="stylesheet" type="text/css" href="用户中心_今纽扣商城_files/public.css"/>
     <script src="用户中心_今纽扣商城_files/modernizr.js"></script>
     <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.js"></script>
-    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.json.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/transport.js"></script>
-    <script type="text/javascript" src="用户中心_今纽扣商城_files/common.js"></script><script type="text/javascript" src="用户中心_今纽扣商城_files/utils.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/jquery.json.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/transport.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/common.js"></script>
+    <script type="text/javascript" src="用户中心_今纽扣商城_files/utils.js"></script>
     <!--尊敬的会员开始-->
     <style>
-        #thumbImg{
+        #thumbImg {
             -webkit-transition: all 0.1s ease-in-out;
             -moz-transition: all 0.1s ease-in-out;
             transition: all 0.1s ease-in-out;
@@ -26,20 +28,23 @@
             bottom: 10px;
             left: 42%;
             position: absolute;
-            top:72px;
+            top: 72px;
             z-index: 10000;
             border-radius: 50%;
         }
-        .com_top{
-            width:100%;
+
+        .com_top {
+            width: 100%;
             height: 150px;
             background: url("./images/beijing.png");
             /*-webkit-animation:yidong 2s ease-in-out;*/
         }
-        .com_top img{
+
+        .com_top img {
             position: relative;
         }
-        .icon{
+
+        .icon {
             width: 100%;
             height: 40px;
             display: -webkit-box;
@@ -50,45 +55,48 @@
             z-index: 10000;
             position: fixed;
         }
-         .icon .icon1{
-             -webkit-box-flex: 1;
-             -ms-flex: 1;
-             -webkit-flex: 1;
-             flex: 1;
-             height: 50px;
-             margin-top:8px;
-             margin-left: 5px;
+
+        .icon .icon1 {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            height: 50px;
+            margin-top: 8px;
+            margin-left: 5px;
             background: url("images/user/m.png") no-repeat;
             background-size: auto 22px;
             box-sizing: border-box;
         }
-         .icon .icon2{
-             -webkit-box-flex: 2;
-             -ms-flex: 2;
-             -webkit-flex: 2;
-             flex: 2;
-             color: white;
-            font-family:微软雅黑;
-             text-align: center;
-        }
-         .icon .icon3{
-             -webkit-box-flex: 1;
-             -ms-flex: 1;
-             -webkit-flex: 1;
-             flex: 1;
-             height: 50px;
-             margin-top:7px;
-            background: url("./images/user/guanbi.png") right 2px  no-repeat;
-            background-size: auto 22px;
-             margin-right:5px;
-             box-sizing: border-box;
+
+        .icon .icon2 {
+            -webkit-box-flex: 2;
+            -ms-flex: 2;
+            -webkit-flex: 2;
+            flex: 2;
+            color: white;
+            font-family: 微软雅黑;
+            text-align: center;
         }
 
+        .icon .icon3 {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            height: 50px;
+            margin-top: 7px;
+            background: url("./images/user/guanbi.png") right 2px no-repeat;
+            background-size: auto 22px;
+            margin-right: 5px;
+            box-sizing: border-box;
+        }
 
         .Order ul li {
             width: 20%;
             float: left;
         }
+
         .Icon14 {
             background: url(./images/user/Iconx14.png) no-repeat center center;
             background-size: auto 30px;
@@ -96,15 +104,16 @@
 
         /*动画帧*/
         @keyframes yidong {
-            0%{
-                 -webkit-filter:blur(3px);
+            0% {
+                -webkit-filter: blur(3px);
             }
-            100%{
-                -webkit-filter:blur(0);
+            100% {
+                -webkit-filter: blur(0);
             }
         }
+
         /*钱包部分开始*/
-        .money{
+        .money {
             height: 180px;
             background: white;
             display: -webkit-box;
@@ -113,107 +122,124 @@
             display: flex;
 
         }
-        .money .money1{
+
+        .money .money1 {
             -webkit-box-flex: 1;
             -ms-flex: 1;
             -webkit-flex: 1;
             flex: 1;
             /* text-align: center;*/
-            border-right:1px solid #efefef;
+            border-right: 1px solid #efefef;
             text-align: center;
-            line-height:1.2;
-            padding-top:36px;
+            line-height: 1.2;
+            padding-top: 36px;
         }
-        .money a{
+
+        .money a {
             font-weight: 700;
-            font-size:14px;
+            font-size: 14px;
             font-family: 楷体;
         }
-        .money span{
+
+        .money span {
             color: #3bb2d4;
 
         }
-      /*  .money .money2{
-            height: 180px;
-            -webkit-box-flex: 2;
-            -ms-flex: 2;
-            -webkit-flex: 2;
-            flex: 2;
-            !*display: -webkit-inline-box;
-            display: -ms-inline-flexbox;
-            display: -webkit-inline-flex;
-            display: inline-flex;*!
-            text-align: center;
-            line-height:1.2;
-            font-size:14px;
-        }*/
-        .money .one{
-            -webkit-box-flex: 1;
-            -ms-flex: 1;
-            -webkit-flex: 1;
-            flex: 1;
-            border-right:1px solid #efefef;
-            text-align: center;
-            line-height:1.2;
-            font-size:14px;
-        }
-        .money2 .one .tgq,.yhq{
-            height: 90px;
-            padding-top:5px;
-            box-sizing: border-box;
-        }
-        .money .two{
-            -webkit-box-flex: 1;
-            -ms-flex: 1;
-            -webkit-flex: 1;
-            flex: 1;
-            text-align: center;
-            line-height:1.2;
-            font-size:14px;
-        }
-        .money .two .jf,.yxy{
-            height: 90px;
-            padding-top:5px;
-            box-sizing: border-box;
-        }
-       .one div,.tow div{
-           text-align: center;
-       }
-       .money .yhq,.jf{
-           border-bottom:1px solid #efefef;
-           box-sizing: border-box;
 
-       }
-        .money em{
+        /*  .money .money2{
+              height: 180px;
+              -webkit-box-flex: 2;
+              -ms-flex: 2;
+              -webkit-flex: 2;
+              flex: 2;
+              !*display: -webkit-inline-box;
+              display: -ms-inline-flexbox;
+              display: -webkit-inline-flex;
+              display: inline-flex;*!
+              text-align: center;
+              line-height:1.2;
+              font-size:14px;
+          }*/
+        .money .one {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            border-right: 1px solid #efefef;
+            text-align: center;
+            line-height: 1.2;
+            font-size: 14px;
+        }
+
+        .money2 .one .tgq, .yhq {
+            height: 90px;
+            padding-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .money .two {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            text-align: center;
+            line-height: 1.2;
+            font-size: 14px;
+        }
+
+        .money .two .jf, .yxy {
+            height: 90px;
+            padding-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .one div, .tow div {
+            text-align: center;
+        }
+
+        .money .yhq, .jf {
+            border-bottom: 1px solid #efefef;
+            box-sizing: border-box;
+
+        }
+
+        .money em {
             display: block;
             float: left;
             width: 100%;
             height: 39px;
         }
-        .yhq .icon2{
+
+        .yhq .icon2 {
             background: url(./images/4.png) no-repeat center center;
             background-size: auto 30px;
         }
-        .icon3{
+
+        .icon3 {
             background: url(./images/9.png) no-repeat center center;
             background-size: auto 30px;
         }
-         .yxy .icon4{
+
+        .yxy .icon4 {
             background: url(./images/6.png) no-repeat center center;
             background-size: auto 30px;
         }
-         .jf .icon5{
+
+        .jf .icon5 {
             background: url(./images/7.png) no-repeat center center;
             background-size: auto 30px;
         }
-        .tgq .icon6{
+
+        .tgq .icon6 {
             background: url(./images/8.png) no-repeat center center;
             background-size: auto 30px;
         }
+
         /*钱包部分结束*/
-        .Order{
+        .Order {
             margin-bottom: 10px;
         }
+
         #goodcover {
             display: none;
             position: absolute;
@@ -227,6 +253,7 @@
             opacity: 0.50;
             filter: alpha(opacity=80);
         }
+
         #code {
             width: 200px;
             height: 280px;
@@ -238,16 +265,20 @@
             text-align: center;
             z-index: 10001;
         }
+
         .close1 {
             width: 200px;
             height: 26px;
         }
+
         #closebt {
             float: right;
         }
+
         #closebt img {
             width: 20px;
         }
+
         #code p {
             height: 30px;
             line-height: 30px;
@@ -255,15 +286,17 @@
             color: #000;
             font-weight: 600;
         }
+
         .code-img {
             width: 200px;
             margin: 0px auto 0 auto;
-            padding-left:20px;
+            padding-left: 20px;
         }
+
         .code-img img {
             width: 160px;
         }
-            </style>
+    </style>
     <!--尊敬的会员结束-->
 </head>
 <body class="body_bj" id="body_bj">
@@ -271,35 +304,36 @@
 <div id="goodcover"></div>
 <div id="code">
     <div class="close1"><a href="javascript:void(0)" id="closebt"><img src="images/close.gif"></a></div>
-    <div class="code-img"> <img id="ewmsrc"  src="images/jnkmall_wx.jpg"/></div>
+    <div class="code-img"><img id="ewmsrc" src="images/jnkmall_wx.jpg"/></div>
     <p>长按此图、识别图中二维码</p>
     <p style="   color: #3bb2d4;">关注今纽扣商城公众号</p>
 </div>
 
 
- <div class="icon" style="background: rgb(230,60,53);     background-image: radial-gradient( 200px at 50px 60px, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) );">
-                <li class="icon1" id="ClickMe"><a href="#"></a></li>
-                <li class="icon2"><a style="color: white;" href="#">尊敬的会员</a></li>
-                <li class="icon3"><a href="#"></a></li>
+<div class="icon"
+     style="background: rgb(230,60,53);     background-image: radial-gradient( 200px at 50px 60px, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) );">
+    <li class="icon1" id="ClickMe"><a href="#"></a></li>
+    <li class="icon2"><a style="color: white;" href="#">尊敬的会员</a></li>
+    <li class="icon3"><a href="#"></a></li>
 </div>
 
 <script>
-    $(function() {
+    $(function () {
         //alert($(window).height());
-        $('#ClickMe').click(function() {
+        $('#ClickMe').click(function () {
             $('#code').center();
             $('#goodcover').show();
             $('#code').fadeIn();
         });
-        $('#closebt').click(function() {
+        $('#closebt').click(function () {
             $('#code').hide();
             $('#goodcover').hide();
         });
-        $('#goodcover').click(function() {
+        $('#goodcover').click(function () {
             $('#code').hide();
             $('#goodcover').hide();
         });
-        jQuery.fn.center = function(loaded) {
+        jQuery.fn.center = function (loaded) {
             var obj = this;
             body_width = parseInt($(window).width());
             body_height = parseInt($(window).height());
@@ -308,11 +342,13 @@
             left_position = parseInt((body_width / 2) - (block_width / 2) + $(window).scrollLeft());
             if (body_width < block_width) {
                 left_position = 0 + $(window).scrollLeft();
-            };
+            }
+            ;
             top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
             if (body_height < block_height) {
                 top_position = 0 + $(window).scrollTop();
-            };
+            }
+            ;
 
             if (!loaded) {
 
@@ -323,10 +359,10 @@
                     'top': ($(window).height() - $('#code').height()) * 0.5,
                     'left': left_position
                 });
-                $(window).bind('resize', function() {
+                $(window).bind('resize', function () {
                     obj.center(!loaded);
                 });
-                $(window).bind('scroll', function() {
+                $(window).bind('scroll', function () {
                     obj.center(!loaded);
                 });
 
@@ -348,17 +384,17 @@
 <div class="com_top border_bottm">
     <i style="margin-bottom:10%"><a href=""><font color="#FFFFFF">申请运营中心</font></a></i>
     <i style="bottom:20px;"><a href="user.php?act=account_shengji"><font color="#FFFFFF">升级合伙人</font></a></i>
-            <!--<ul>
-            <li class="bain"><a href="user.php?act=order_list" ><span>0</span>我的订单</a></li>
-            <li class="bain"><a href="user.php?act=collection_list"><span>0</span>我的收藏</a></li>
-            <li style=" border:0"><a href="user.php?act=my_comment"><span>0</span>我的评价</a></li>
-            </ul>-->
-        </div>
+    <!--<ul>
+    <li class="bain"><a href="user.php?act=order_list" ><span>0</span>我的订单</a></li>
+    <li class="bain"><a href="user.php?act=collection_list"><span>0</span>我的收藏</a></li>
+    <li style=" border:0"><a href="user.php?act=my_comment"><span>0</span>我的评价</a></li>
+    </ul>-->
+</div>
 <div id="tbh5v0">
 
     <div class="user_com">
-        
-       
+
+
         <!--div class="Order">
         <dl><a href="user.php?act=order_list"><dt><strong>我的订单</strong><span>查看全部订单</span></dt></a></dl>
         <ul>
@@ -370,19 +406,20 @@
         </div-->
         <div class="Order">
             <ul>
-                <li ><a href="user.php?act=account_manage"><em class="Icon1"></em><span>浏览商品</span></a></li>
-                <li ><a href="user.php?act=order_list"><em class="Icon2"></em><span>我的订单</span></a></li>
-                <li ><a href="v_user_huiyuan.php"><em class="Icon4"></em><span>我的推荐</span></a></li>
-                <li ><a href="user.php?act=affiliate"><em class="Icon13"></em><span style='width:5em'>我的二维码</span></a></li>
-                <li ><a href="user.php?act=affiliate"><em class="Icon14"></em><span>我的店铺</span></a></li>
+                <li><a href="user.php?act=account_manage"><em class="Icon1"></em><span>浏览商品</span></a></li>
+                <li><a href="user.php?act=order_list"><em class="Icon2"></em><span>我的订单</span></a></li>
+                <li><a href="v_user_huiyuan.php"><em class="Icon4"></em><span>我的推荐</span></a></li>
+                <li><a href="user.php?act=affiliate"><em class="Icon13"></em><span style='width:5em'>我的二维码</span></a>
+                </li>
+                <li><a href="user.php?act=affiliate"><em class="Icon14"></em><span>我的店铺</span></a></li>
             </ul>
         </div>
         <!--钱包体验开始-->
         <div class="money">
             <div class="money1">
-                    <li><img src="./images/user/Icon1.png" alt=""></li>
-                    <li><a href="#">我的钱包</a></li>
-                    <li><a href="#"><span>充值</span><span>提现</span><span>明细</span></a></li>
+                <li><img src="./images/user/Icon1.png" alt=""></li>
+                <li><a href="#">我的钱包</a></li>
+                <li><a href="#"><span>充值</span><span>提现</span><span>明细</span></a></li>
             </div>
             <!--<div class="money2">-->
             <div class="one">
@@ -392,17 +429,17 @@
                     <li><a href=""><span>2张可用</span></a></li>
                 </div>
                 <div class="tgq">
-                    <li> <a href="#"><em class="icon6"></em></a></li>
+                    <li><a href="#"><em class="icon6"></em></a></li>
                     <li><a href="#">金币</a></li>
                     <li><a href="#"><span>0张可用</span></a></li>
                 </div>
             </div>
             <div class="two">
                 <div class="jf">
-                            <li><a href="#"><em class="icon5"></em></a></li>
-                            <li><a href="">积分</a></li>
-                            <li><a href=""><span>2张可用</span></a></li>
-                        </div>
+                    <li><a href="#"><em class="icon5"></em></a></li>
+                    <li><a href="">积分</a></li>
+                    <li><a href=""><span>2张可用</span></a></li>
+                </div>
                 <div class="yxy">
                     <li><a href="#"><em class="icon4"></em></a></li>
                     <li><a href="">红包</a></li>
@@ -410,29 +447,67 @@
                 </div>
             </div>
 
-           <!-- </div>-->
+            <!-- </div>-->
 
         </div>
 
         <!--钱包体验结束-->
         <div class="Wallet main_top">
-            <a href="user.php?act=profile"><em class="Icon5"></em><dl class="border_bottm"><dt>会员信息</dt><dd>&nbsp;</dd></dl></a>
-            <a href="user.php?act=my_comment"><em class="Icon6"></em><dl class="border_bottm">
-                <dt>商品评价</dt><dd>&nbsp;</dd></dl></a>
-            <a href="user.php?act=collection_list"><em class="Icon7"></em><dl class="border_bottm"><dt>我的收藏</dt><dd>&nbsp;</dd></dl></a>
-            <a href="user.php?act=address_list"><em class="Icon8"></em><dl class="border_bottm"><dt>收货地址</dt><dd>&nbsp;</dd></dl></a>
-            <a href="user.php?act=message_list"><em class="Icon9"></em><dl class="border_bottm"><dt>我的留言</dt><dd>&nbsp;</dd></dl></a>
-            <a href="javascript:void(0)" onClick="window.location.href='user.php?act=logout'" ><em class="Icon10"></em><dl><dt>退出登录</dt></dl></a>
+            <a href="user.php?act=profile"><em class="Icon5"></em>
+                <dl class="border_bottm">
+                    <dt>会员信息</dt>
+                    <dd>&nbsp;</dd>
+                </dl>
+            </a>
+            <a href="user.php?act=my_comment"><em class="Icon6"></em>
+                <dl class="border_bottm">
+                    <dt>商品评价</dt>
+                    <dd>&nbsp;</dd>
+                </dl>
+            </a>
+            <a href="user.php?act=collection_list"><em class="Icon7"></em>
+                <dl class="border_bottm">
+                    <dt>我的收藏</dt>
+                    <dd>&nbsp;</dd>
+                </dl>
+            </a>
+            <a href="user.php?act=address_list"><em class="Icon8"></em>
+                <dl class="border_bottm">
+                    <dt>收货地址</dt>
+                    <dd>&nbsp;</dd>
+                </dl>
+            </a>
+            <a href="user.php?act=message_list"><em class="Icon9"></em>
+                <dl class="border_bottm">
+                    <dt>我的留言</dt>
+                    <dd>&nbsp;</dd>
+                </dl>
+            </a>
+            <a href="javascript:void(0)" onClick="window.location.href='user.php?act=logout'"><em class="Icon10"></em>
+                <dl>
+                    <dt>退出登录</dt>
+                </dl>
+            </a>
         </div>
         <div class="Wallet main_top">
-            <a href="http://mp.weixin.qq.com/s?__biz=MzAxMTg4MTAwNg==&mid=100000002&idx=1&sn=c91c6c30bd914ae4b98ad56d04dd1121#rd"><em class="Icon11"></em><dl class="border_bottm"><dt>客服中心</dt></dl></a>
-            <a href="http://mp.weixin.qq.com/s?__biz=MzAxMTg4MTAwNg==&mid=100000012&idx=1&sn=a2fd979b648cd6d899660367b6059abd#rd"><em class="Icon12"></em><dl><dt>帮助中心</dt></dl></a>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzAxMTg4MTAwNg==&mid=100000002&idx=1&sn=c91c6c30bd914ae4b98ad56d04dd1121#rd"><em
+                    class="Icon11"></em>
+                <dl class="border_bottm">
+                    <dt>客服中心</dt>
+                </dl>
+            </a>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzAxMTg4MTAwNg==&mid=100000012&idx=1&sn=a2fd979b648cd6d899660367b6059abd#rd"><em
+                    class="Icon12"></em>
+                <dl>
+                    <dt>帮助中心</dt>
+                </dl>
+            </a>
         </div>
     </div>
 
 
-    <div class="footer" >
-        <div class="links"  id="ECS_MEMBERZONE">
+    <div class="footer">
+        <div class="links" id="ECS_MEMBERZONE">
             <a href="user.php">
                 <span>18201113487</span>
             </a>
@@ -447,10 +522,11 @@
             <li>
                 <a href="#">
                     <i class="footerimg_1"></i>
-                    <span >客户端</span></a></li>
+                    <span>客户端</span></a></li>
             <li>
                 <a href="javascript:;"><i class="footerimg_2"></i><span class="gl">触屏版</span></a></li>
-            <li><a href="index.php?is_c=1" class="goDesktop"><i class="footerimg_3"></i><span>电脑版</span></a></li></ul>
+            <li><a href="index.php?is_c=1" class="goDesktop"><i class="footerimg_3"></i><span>电脑版</span></a></li>
+        </ul>
         <p class="mf_o4">&copy; 2014-2016 今纽扣商城 版权所有，并保留所有权利。</p>
     </div>
 
@@ -458,12 +534,13 @@
     <div class="v_nav">
         <div class="vf_nav">
             <ul>
-                <li> <a href="./">
+                <li><a href="./">
                     <i class="vf_1"></i>
                     <span>首页</span></a></li>
-                <li><a href="http://mp.weixin.qq.com/s?__biz=MzAxMTg4MTAwNg==&mid=100000002&idx=1&sn=c91c6c30bd914ae4b98ad56d04dd1121#rd">
-                    <i class="vf_2"></i>
-                    <span>客服</span></a></li>
+                <li>
+                    <a href="http://mp.weixin.qq.com/s?__biz=MzAxMTg4MTAwNg==&mid=100000002&idx=1&sn=c91c6c30bd914ae4b98ad56d04dd1121#rd">
+                        <i class="vf_2"></i>
+                        <span>客服</span></a></li>
                 <li><a href="catalog.php">
                     <i class="vf_3"></i>
                     <span>分类</span></a></li>
@@ -485,67 +562,66 @@
 
 <script type="text/javascript">
 
-document.getElementById("body_bj").addEventListener("touchmove", touchmove, false);
+    document.getElementById("body_bj").addEventListener("touchmove", touchmove, false);
 
-$(document).ready(function(){
-   
-    $("#mytest").width($(".body_bj").scrollTop());
-  $(".btn1").click(function(){
-    //$("div").scrollTop(100);
-  });
-  $(".btn2").click(function(){
-    alert($(".body_bj").scrollTop()+" px");
-  });
+    $(document).ready(function () {
+
+        $("#mytest").width($(".body_bj").scrollTop());
+        $(".btn1").click(function () {
+            //$("div").scrollTop(100);
+        });
+        $(".btn2").click(function () {
+            alert($(".body_bj").scrollTop() + " px");
+        });
 
 
-
-});
-function touchmove(){
-    console.info("高度"+$(".body_bj").scrollTop());
-    //$("#thumbImg").width($(".body_bj").scrollTop());
-    //$("#thumbImg").animate({height:$(".body_bj").scrollTop()},10);
-    //$("#thumbImg").width($(".body_bj").scrollTop());
-    /*
-    if( $(".body_bj").scrollTop()>=0){
+    });
+    function touchmove() {
+        console.info("高度" + $(".body_bj").scrollTop());
+        //$("#thumbImg").width($(".body_bj").scrollTop());
+        //$("#thumbImg").animate({height:$(".body_bj").scrollTop()},10);
+        //$("#thumbImg").width($(".body_bj").scrollTop());
+        /*
+         if( $(".body_bj").scrollTop()>=0){
          $("#thumbImg").css("z-index",100000000000000);
-        var topScro = $(".body_bj").scrollTop;
-        var per = $(".body_bj").scrollTop()/160;
-        var realPer = 1 - per;
-        var yadd = $(".body_bj").scrollTop()/1.5;
-        var xadd = $(".body_bj").scrollTop()/0.4;
-        console.info("百分"+per);
-        $("#thumbImg").css("transform","scale("+realPer+") translate(-"+xadd+"%,"+yadd+"%)");
-        setTimeout("touchmove()",500);
-    }else{
-    }  
-*/
-}
- $(window).scroll(function(){
+         var topScro = $(".body_bj").scrollTop;
+         var per = $(".body_bj").scrollTop()/160;
+         var realPer = 1 - per;
+         var yadd = $(".body_bj").scrollTop()/1.5;
+         var xadd = $(".body_bj").scrollTop()/0.4;
+         console.info("百分"+per);
+         $("#thumbImg").css("transform","scale("+realPer+") translate(-"+xadd+"%,"+yadd+"%)");
+         setTimeout("touchmove()",500);
+         }else{
+         }
+         */
+    }
+    $(window).scroll(function () {
         var targetPercentage = 70;
         var navBarHeight = 66;
         var targetID = "#navigation";
         var scrollTo = $(window).scrollTop(),
-        docHeight = $(document).height(),
-        windowHeight = $(window).height();
-        scrollPercent = (scrollTo / (docHeight-windowHeight)) * 100;
+                docHeight = $(document).height(),
+                windowHeight = $(window).height();
+        scrollPercent = (scrollTo / (docHeight - windowHeight)) * 100;
         scrollPercent = scrollPercent.toFixed(1);
-        $('#percentageCounter h1').text(scrollPercent+"%");
+        $('#percentageCounter h1').text(scrollPercent + "%");
 
 
- var per = scrollTo/160;
+        var per = scrollTo / 160;
         var realPer = 1 - per;
 
-        var yadd = scrollTo/1.5;
-        var xadd = scrollTo/0.4;
-        console.info("百分"+per);
-        $("#thumbImg").css("transform","scale("+realPer+") translate(-"+xadd+"%,"+yadd+"%)");
+        var yadd = scrollTo / 1.5;
+        var xadd = scrollTo / 0.4;
+        console.info("百分" + per);
+        $("#thumbImg").css("transform", "scale(" + realPer + ") translate(-" + xadd + "%," + yadd + "%)");
 
         console.info(scrollTo);
-        if(scrollPercent > targetPercentage){
-            $(targetID).css({top:'0'});
+        if (scrollPercent > targetPercentage) {
+            $(targetID).css({top: '0'});
         }
-        if(scrollPercent < targetPercentage){
-            $(targetID).css({ top: '-'+navBarHeight+'px' });
+        if (scrollPercent < targetPercentage) {
+            $(targetID).css({top: '-' + navBarHeight + 'px'});
         }
     }).trigger('scroll');
 
