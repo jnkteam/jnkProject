@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <title>御苻酒店会员卡系统</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" tppabs="css/style.css" />
+    <link rel="stylesheet" href="./css/jquery.e-calendar.css"/>
     <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="./js/jquery.e-calendar.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+
     <style>
         body{background:#e7e7e7;}
         .header{
@@ -126,7 +130,7 @@
         }
         .right{
             float: right;
-            height: 500px;
+            height: 700px;
             width: 260px;
             border: 1px solid #C3C3C3;
             background: #F9F9F9;
@@ -154,7 +158,7 @@
             line-height: 3;
         }
         .right .text{
-            margin-top:60px;
+            margin-top:40px;
         }
         .text p{
             font-size:14px;
@@ -220,8 +224,12 @@
                 <input type="number" style="color:red;" >
             </div>
             <div class="name">
-                <span>本次消费: &nbsp;&nbsp;</span>
-                <input type="number" style="color:red;">
+                <span>刷卡余额: &nbsp;&nbsp; </span>
+                <input class="del" type="text" >
+            </div>
+            <div class="name">
+                <span>现金余额: &nbsp;&nbsp;</span>
+                <input class="del" type="text" >
             </div>
             <div class="name">
                 <span>消费后余额: </span>
@@ -349,11 +357,10 @@
         </div>
         <ul>
             <li>会员姓名：<span>zjf</span></li>
-            <li>注册卡号：<span>5623052255333</span></li>
-            <li>注册手机号：<span>1255255222</span></li>
             <li>登录时间：<span></span></li>
             <li>消费金额：<span></span></li>
         </ul>
+        <div id="calendar"></div>
         <div class="text">
             <p>欢迎使用御苻酒店系统平台</p><br>
             <p>电话：0000000</p>
@@ -373,7 +380,6 @@
             var index = $(this).index()
             $('.footer>form').eq(index).css('display','block').siblings().css('display','none')
         })
-
     })
 </script>
 </body>

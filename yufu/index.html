@@ -10,7 +10,6 @@ body{height:100%;background:#16a085;overflow:hidden;}
 canvas{z-index:-1;position:absolute;}
 </style>
 <script src="js/jquery.js"></script>
-<script src="js/verificationNumbers.js" tppabs="js/verificationNumbers.js"></script>
 <script src="js/Particleground.js" tppabs="js/Particleground.js"></script>
 <script>
 $(document).ready(function() {
@@ -19,14 +18,21 @@ $(document).ready(function() {
     dotColor: '#5cbdaa',
     lineColor: '#5cbdaa'
   });
-  //验证码
-  createCode();
   //测试提交，对接程序删除即可
   $(".submit_btn").click(function(){
 	  location.href="javascrpt:;"/*tpa=http://***index.html*/;
 	  });
 });
 </script>
+    <style>
+        .up{
+            width: 395px;
+            height: 40px !important;
+            background: white;
+            opacity:0.5;
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <dl class="admin_login">
@@ -40,6 +46,9 @@ $(document).ready(function() {
  <dd class="pwd_icon">
   <input type="password" placeholder="密码" class="login_txtbx"/>
  </dd>
+    <dd class="up">
+
+    </dd>
  <dd>
   <input type="button" value="立即登陆" class="submit_btn"/>
  </dd>
@@ -49,4 +58,12 @@ $(document).ready(function() {
  </dd>
 </dl>
 </body>
+
+<script>
+    $(function(){
+        $('.submit_btn').on('click',function(){
+            $('.up').slideDown(3000)
+        })
+    })
+</script>
 </html>
