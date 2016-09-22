@@ -3,45 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css" tppabs="css/style.css" />
-    <title>Title</title>
+    <title>密码锁定</title>
     <style>
-        body{
-            height: 100%;
-            background: #16a085;
+        body{background:url(./images/bj.jpg) center center;
+            background-size:cover;
+            height:100%;
+            width:100%;
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/beijing.jpg', sizingMethod='scale');
+            overflow: hidden;
         }
-        input{
+        input,button{
             border:0 none;
         }
         .admin{
             width: 400px;
             height: 300px;
-            margin:20% auto;
-            box-shadow: 0px 0px 60px #0d957a;
+            margin:300px auto;
+            box-shadow: 0px 0px 60px #fff;
             text-align: center;
             padding-top:40px;
             box-sizing: border-box;
+           /* border:1px solid #C3C3C3;*/
         }
         .icon{
             display: block;
             width: 120px;
             height: 120px;
-            background: red;
+            background:url("./images/p.jpg") -40px 0px;
             border-radius: 60px;
+            overflow: hidden;
             margin-left:auto;
             margin-right:auto;
         }
         .admin li{
-            padding-bottom:10px;
+            padding-bottom:20px;
+            font-size:18px;
+
+        }
+        .pd{
+            position: relative;
+            margin:0 auto;
+        }
+        .pwd,.btn{
+            font-size:14px;
+        }
+        .pwd{
+            height: 26px;
+            line-height: 26px;
+            padding: 4px;
+            width: 45%;
+            border: none;
+            background: #fff;
+            position: absolute;
+            left:85px;
+            top:0;
+        }
+        .btn{
+            width: 15%;
+            margin:0;
+            padding:0;
+            height: 34px !important;
+            position: absolute;
+            left:270px;
+            top:0;
         }
     </style>
 </head>
 <body>
     <div class="admin">
         <li><i class="icon"></i></li>
-        <li>ADMIN用户名</li>
-        <li>
-            <input type="text"value="密码">
-            <button>登录</button>
+        <li style="color: #fff;">ADMIN用户名</li>
+        <li class="pd">
+            <input class="pwd" type="password" placeholder="密码">
+            <input class="btn" type="button" value="登录">
         </li>
     </div>
 </body>

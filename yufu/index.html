@@ -6,33 +6,26 @@
 <meta name="author" content="DeathGhost" />
 <link rel="stylesheet" type="text/css" href="css/style.css" tppabs="css/style.css" />
 <style>
-body{height:100%;background:#16a085;overflow:hidden;}
-canvas{z-index:-1;position:absolute;}
+    body{background:url(./images/bj.jpg) center center;
+        background-size:cover;
+        height:100%;
+        width:100%;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./images/beijing.jpg', sizingMethod='scale');
+        overflow: hidden;
+    }
+    input::-webkit-input-placeholder{
+        color: #000 !important;
+    }
+    input:-moz-placeholder{
+        color: #000 !important;
+    }
+    input::-moz-placeholder{
+        color: #000 !important;
+    }
+    input:-ms-input-placeholder{
+        color: #000 !important;
+    }
 </style>
-<script src="js/jquery.js"></script>
-<script src="js/Particleground.js" tppabs="js/Particleground.js"></script>
-<script>
-$(document).ready(function() {
-  //粒子背景特效
-  $('body').particleground({
-    dotColor: '#5cbdaa',
-    lineColor: '#5cbdaa'
-  });
-  //测试提交，对接程序删除即可
-  $(".submit_btn").click(function(){
-	  location.href="javascrpt:;"/*tpa=http://***index.html*/;
-	  });
-});
-</script>
-    <style>
-        .up{
-            width: 395px;
-            height: 40px !important;
-            background: white;
-            opacity:0.5;
-            display: none;
-        }
-    </style>
 </head>
 <body>
 <dl class="admin_login">
@@ -41,14 +34,11 @@ $(document).ready(function() {
   <em>Management System</em>
  </dt>
  <dd class="user_icon">
-  <input type="text" value="账号" class="login_txtbx"/>
+  <input type="text" placeholder="账号" class="login_txtbx"/>
  </dd>
  <dd class="pwd_icon">
   <input type="password" placeholder="密码" class="login_txtbx"/>
  </dd>
-    <dd class="up">
-
-    </dd>
  <dd>
   <input type="button" value="立即登陆" class="submit_btn"/>
  </dd>
@@ -59,11 +49,4 @@ $(document).ready(function() {
 </dl>
 </body>
 
-<script>
-    $(function(){
-        $('.submit_btn').on('click',function(){
-            $('.up').slideDown(3000)
-        })
-    })
-</script>
 </html>
