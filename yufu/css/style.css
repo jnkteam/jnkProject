@@ -1,6 +1,7 @@
 @charset "UTF-8";
 html{}
 body{margin:0;height:100%;}
+dl,dt,dd{margin:0;padding:0;}
 a:active,a:hover{outline:0}
 button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
 button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
