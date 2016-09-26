@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小票</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" tppabs="css/style.css" />
+    <style>
+        .xp{
+            width: 200px;
+            height: 330px;
+            border: 1px solid #C3C3C3;
+            font-size: 12px;
+            font-family:微软雅黑;
+            margin:0 auto;
+        }
+       .icon{
+           width: 100px;
+           height: 100px;
+           background: url("./images/jnkmall_wx.jpg") no-repeat;
+           background-size: auto 100px;
+           margin:0 auto;
+           margin-bottom:0px;
+       }
+        .text p{
+            text-align: center;
+        }
+        .main{
+            margin-top:5px;
+            margin-left:10px;
+            margin-right:10px;
+        }
+        .main p{
+            font-size: 12px;
+            line-height:2;
+        }
+        .main .hr{
+            margin-top:5px;
+            border: 1px dashed #C3C3C3;
+            margin-bottom:3px;
+        }
+        .money{
+            overflow: hidden;
+        }
+        .money li{
+            margin:5px 0;
+            float: left;
+            width: 50%;
+
+        }
+        input{
+            display: block;
+            width: 200px;
+            height: 40px;
+            border:1px solid #C3C3C3;
+            line-height: 40px;
+            text-align: center;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+<!--startprint1-->
+    <div class="xp">
+        <div class="icon"></div>
+        <div class="text">
+            <p>御苻国际酒店--今纽扣商城</p>
+            <p>xxxx-xx-xx&nbsp;xx:xx:xx</p>
+        </div>
+        <div class="main">
+            <p>营业员：<span></span></p>
+            <p>单据号：<span></span></p>
+            <div class="hr"></div>
+            <div class="money">
+                <li>金额：<span></span></li>
+                <li>找零：<span></span></li>
+            </div>
+            <div class="hr"></div>
+            <div class="money">
+                <li>现金：<span></span></li>
+                <li>刷卡：<span></span></li>
+            </div>
+            <div class="hr"></div>
+            <p>贵宾会员：<span></span></p>
+            <p>会员金币：<span></span></p>
+            <div class="hr"></div>
+            <p>谢谢惠顾！</p>
+        </div>
+    </div>
+<!--endprint1-->
+    <OBJECT id="wb" height='0' width='0' classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" name="wb"></OBJECT>
+   <!-- <OBJECT id="WebBrowser1" height=0 width=0 classid=CLSID:8856F961-340A-11D0-A96B-00C04FD705A2 name=wb></OBJECT>-->
+    <!--<input type="button" value="打印" onclick="printit()"/>-->
+  <!--  <input type="button" value="打印预览" onclick="printPreivew()"/>-->
+    <input type="button" value="打印" onclick="preview(1)"/>
+
+    <script>
+        function preview(oper){
+            if (oper < 10){
+                bdhtml = window.document.body.innerHTML;//获取当前页的html代码
+                sprnstr = "<!--startprint"+oper+"-->";//设置打印开始区域
+                eprnstr = "<!--endprint"+oper+"-->";//设置打印结束区域
+                prnhtml = bdhtml.substring(bdhtml.indexOf(sprnstr)+18); //从开始代码向后取html
+                prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));//从结束代码向前取html
+                window.document.body.innerHTML=prnhtml;
+                window.print();
+                //window.document.body.innerHTML=bdhtml;
+            } else{
+                window.print();
+            }
+        }
+    </script>
+
+
+</body>
+</html>
