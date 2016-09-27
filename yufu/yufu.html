@@ -36,6 +36,11 @@
             margin-right:6px;
             float: left;
         }
+        .nav li{
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5px;
+        }
         .nav li a{
             display: block;
             width: 120px;
@@ -46,6 +51,8 @@
         }
         .active{
             background:#47ABC3;
+        }
+        .nav .active .public{
             color: #fff;
         }
         i{
@@ -195,7 +202,7 @@
         <ul>
             <li class="active">
                 <i class="icon1"></i>
-                <a href="#">首页</a>
+                <a class="public" href="#">首页</a>
             </li>
             <li>
                 <i class="icon2"></i>
@@ -386,6 +393,7 @@
             $(this).addClass('active').siblings().removeClass('active')
             var index = $(this).index()
             $('.footer>form').eq(index).css('display','block').siblings().css('display','none')
+            $('.nav li a').addClass('public').parent().siblings().children().find(a).removeClass('public');
         })
     })
 </script>
