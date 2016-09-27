@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +6,22 @@
     <title>御苻酒店会员卡系统</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" tppabs="css/style.css" />
     <link rel="stylesheet" href="./css/jquery.e-calendar.css"/>
+    <link rel="stylesheet" href="./css/table_form.css"/>
+    <link rel="stylesheet" type="text/css" href="./date/jquery.datetimepicker.css" / >
     <script src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="./js/formvalidator.js"></script>
+    <script type="text/javascript" src="./js/formvalidatorregex.js"></script>
     <script type="text/javascript" src="./js/jquery.e-calendar.js"></script>
-    <script type="text/javascript" src="./js/index.js"></script>
+
+
+
     <style>
         body{background:#e7e7e7;}
         .header{
             width: 100%;
             height: 80px;
-            background:#47ABC3;
+            background: #02AFF4;
             color:white;
             font-size:20px;
             margin-bottom:40px;
@@ -36,11 +44,7 @@
             margin-right:6px;
             float: left;
         }
-        .nav li{
-            -webkit-border-radius:5px;
-            -moz-border-radius:5px;
-            border-radius:5px;
-        }
+
         .nav li a{
             display: block;
             width: 120px;
@@ -50,10 +54,9 @@
             text-align: center;
         }
         .active{
-            background:#47ABC3;
-        }
-        .nav .active .public{
-            color: #fff;
+            border-radius: 7px;
+            background:#02AFF4;
+            color: #000;
         }
         i{
             display: block;
@@ -61,12 +64,6 @@
             height: 25px;
             margin: auto;
             background: url(./images/footer_navimg.png) no-repeat;
-           /* filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(  src='./images/footer_navimg.png',
-            sizingMethod='scale');*/
-            -moz-bcakground-size: auto 180px;
-            -ms-background-size: auto 180px;
-            -o-background-size: auto 180px;
-            -webkit-background-size: auto 180px;
             background-size: auto 180px;
         }
         .icon1{
@@ -78,12 +75,6 @@
         .icon3{
             width: 37px;
             background: url("./images/icon5.png");
-            /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(  src='./images/icon5.png',
-            sizingMethod='scale');*/
-            -moz-bcakground-size: auto 25px;
-            -ms-background-size: auto 25px;
-            -o-background-size: auto 25px;
-            -webkit-background-size: auto 25px;
             background-size: auto 25px;
         }
         .icon4{
@@ -95,10 +86,11 @@
         }
         .footer{
             float: left;
-            background: white;
+
         }
         form{
-            height: 700px;
+            height: auto;
+            background: white;
             width: 800px;
             border:2px solid #C3C3C3;
         }
@@ -107,10 +99,16 @@
             font-size: 24px;
         }
         .name span{
-           padding-right:10px;
+            padding-right:10px;
+        }
+        .nav li{
+            margin-bottom: 20px;
+        }
+        .name1{
+            margin:10px;
         }
         input {
-            width: 80%;
+            width: 40%;
             height: 40px;
             font-size: 22px;
             margin-top: 10px;
@@ -135,19 +133,15 @@
             width: 25%;
         }
         .footer .log{
-            width: 600px;
-            height: 140px;
+            width: 750px;
+            height: auto;
             margin:0 auto;
             border:2px solid #C3C3C3;
         }
         .log dl{
-            margin-top:10px;
             float: left;
-            width: 120px;
-            text-align: center;
-        }
-        .log dd{
-            padding-top:10px;
+            width: auto;
+            text-align: left;
         }
         .right{
             float: right;
@@ -164,7 +158,7 @@
             margin-top:0;
             font-size:20px;
             font-weight:700;
-            color: #47ABC3;
+            color: #02AFF4;
             padding-left:15px;
             height: 60px;
             line-height:60px;
@@ -182,17 +176,56 @@
             margin-top:40px;
         }
         .text p{
-            font-size:14px;
+            font-size:14px;+
             text-align: center;
             color: #C6C6C6;
         }
+        .logtable th{text-align: center;}
+        .logtable th {padding: 5px;}
+        .logtable td {padding: 5px;text-align: center;}
+
+        .long{
+            height: 600px;
+        }
+        .top-nav{
+            width: 100%;
+            height: 40px;
+            background: #02AFF4;
+            -webkit-border-radius:20px;
+            -moz-border-radius:20px;
+            border-radius:20px;
+        }
+        .top-nav li{
+            float: left;
+            font-size: 18px;
+            
+        }
+        .top-nav li a{
+            display:block;
+            height: 40px;
+            line-height: 40px;
+            padding:0 40px 0 40px;
+            color: #fff;
+            box-sizing: border-box;
+        }
+         .top-nav .message{
+            background: #fff;
+            -webkit-border-radius:20px;
+            -moz-border-radius:20px;
+            border-radius:20px;
+            color: #02AFF4;
+        }
+        .top-nav .ms{
+
+        }
     </style>
+
 </head>
 <body>
 <div class="header">
     <div class="main">
-        <span class="lf">御苻酒店会员卡系统</span>
-        <span class="rt">登录时间:2016年08月08日</span>
+        <span class="lf">御茯酒店会员卡系统</span>
+        <span class="rt">登录时间:2016-09-27 11:06:18</span>
     </div>
 
 </div>
@@ -200,202 +233,279 @@
 <div class="main">
     <div class="nav">
         <ul>
-            <li class="active">
-                <i class="icon1"></i>
-                <a class="public" href="#">首页</a>
+            <li class=" ">
+                <a href="">
+                    <i class="icon1"></i>
+                    首页
+                </a>
             </li>
-            <li>
-                <i class="icon2"></i>
-                <a href="#">消费</a>
+            <li class=" ">
+                <a href="">
+                    <i class="icon2"></i>
+                    消费
+                </a>
+
             </li>
-            <li>
-                <i class="icon3"></i>
-                <a href="#">充值</a>
+            <li class=" ">
+                <a href="">
+                    <i class="icon3"></i>
+                    充值
+                </a>
             </li>
-            <li>
-                <i class="icon4"></i>
-                <a href="#">办卡</a>
+            <li class=" ">
+                <a href="">
+                    <i class="icon4"></i>
+                    办卡
+                </a>
             </li>
-            <li>
-                <i class="icon5"></i>
-                <a href="#">日志</a>
+            <li class=" active">
+                <a href="">
+                    <i class="icon5"></i>
+                    日志
+                </a>
             </li>
         </ul>
     </div>
+
     <div class="footer">
-        <form method="post" style="display:block;" action="">
-            <img src="./images/center.jpg" alt="">
-        </form>
-        <form method="post" style="display: none;" action="">
-            <div class="name">
-                <span>卡号: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="tel" required="" autofocus="" placeholder="请输入卡号">
-            </div>
-            <div class="name">
-                <span>手机号: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="tel"  placeholder="请输入手机号">
-            </div>
-            <div class="name">
-                <span>姓名: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="text" placeholder="请输入姓名">
-            </div>
-            <div class="name">
-                <span>当前余额: &nbsp;&nbsp;</span>
-                <input type="number" style="color:red;" >
-            </div>
-            <div class="name">
-                <span>刷卡余额: &nbsp;&nbsp; </span>
-                <input class="del" type="text" >
-            </div>
-            <div class="name">
-                <span>现金余额: &nbsp;&nbsp;</span>
-                <input class="del" type="text" >
-            </div>
-            <div class="name">
-                <span>消费后余额: </span>
-                <input class="del" type="text" >
-            </div>
-            <div style="margin-left:170px;" class="name btn">
-                <input class="sub" type="submit"  value="确定消费">
-                <input class="sub" type="submit"  value="重置表单">
-            </div>
+        <div class="top-nav">
+            <li ><a href="#" class="message">详细信息</a></li>
+            <li><a href="#">会员信息</a></li>
+        </div>
+        <form class="long" id="logForm" method="post"  >
 
-        </form>
-        <form method="post" style="display: none;" action="">
-            <div class="name">
-                <span>卡号: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="tel" required="" autofocus="" placeholder="请输入卡号">
-            </div>
-            <div class="name">
-                <span>手机号: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="tel"  placeholder="请输入手机号">
-            </div>
-            <div class="name">
-                <span>姓名: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="text" placeholder="请输入姓名">
-            </div>
-            <div class="name">
-                <span>当前余额: &nbsp;&nbsp;</span>
-                <input type="number" style="color:red;">
-            </div>
-            <div class="name">
-                <span>充值余额: &nbsp;&nbsp;</span>
-                <input type="number" style="color:red;">
-            </div>
-            <div class="name">
-                <span>充值后余额: </span>
-                <input class="del" type="text" >
-            </div>
-            <div style="margin-left:170px;" class="name btn">
-                <input class="sub" type="submit"  value="确定充值">
-                <input class="sub" type="submit"  value="重置表单">
-            </div>
-        </form>
-        <form method="post" style="display: none;" action="">
-            <div class="name">
-                <span>卡号: &nbsp;&nbsp;</span>
-                <input type="tel" required="" autofocus="" placeholder="请输入卡号">
-            </div>
-            <div class="name">
-                <span>手机号: </span>
-                <input type="tel"  placeholder="请输入手机号">
-            </div>
-            <div class="name">
-                <span>姓名: &nbsp;&nbsp;</span>
-                <input type="text" placeholder="请输入姓名">
-            </div>
-            <div class="name">
-                <span>金额: &nbsp;&nbsp;</span>
-                <input type="number" style="color:red;">
-            </div>
-            <div class="name bank">
-                <input style="border:0 none;" type="radio" name="sex" value="1" tabindex="3" class="radio" id="sex1">
-                新办卡</label>
-                <input style="border:0 none;" type="radio" name="sex" value="1" tabindex="3" class="radio" id="sex1">
-                更换卡</label>
-            </div>
-            <div style="margin-left:100px;" class="name btn">
-                <input class="sub" type="submit"  value="确认">
-                <input class="sub" type="submit"  value="重置表单">
-            </div>
-
-
-        </form>
-        <form class="long" method="post" style="display: none;" action="">
-            <div class=" name name1">
+            <!--<div class=" name name1">
                 <span>卡号:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="tel" required="" autofocus="" placeholder="请输入卡号">
+                <input id="logCardId" name="cardNum" type="text" placeholder="请输入卡号">
             </div>
             <div class="name name1">
                 <span>手机:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="tel" placeholder="请输入卡号">
+                <input  id="logTel" name="tel" type="text"  placeholder="请输入卡号">
             </div>
             <div class="name name1">
                 <span>姓名:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="text"  placeholder="请输入姓名">
+                <input id="logNames" name="names" type="text"  placeholder="请输入姓名">
             </div>
             <div class="name name1">
                 <span>开始时间:</span>
-                <input type="date" value="2016-01-01">
+                <input type="text" id="logStartTime" class="datetimepicker" name="startTime" >
             </div>
             <div class="name name1">
                 <span>结束时间:</span>
-                <input type="date" value="2016-06-01">
+                <input type="text"id="logEndTime" class="datetimepicker" name="endTime" >
             </div>
             <div style="margin-left:135px;" class="name btn">
-                <input class="sub" type="submit"  value="确认">
-                <input class="sub" type="submit"  value="重置表单">
+                <input class="sub" type="button" onclick="logFormSubmit()"  value="确认">
+                <input class="sub" type="button"  value="重置表单">
             </div>
             <div class="log">
-                <dl>
-                    <dt>卡号</dt>
-                    <dd>44156121266</dd>
-                </dl>
-                <dl>
-                    <dt>手机</dt>
-                    <dd>4165562311256</dd>
-                </dl>
-                <dl>
-                    <dt>姓名</dt>
-                    <dd>张三</dd>
-                </dl>
-                <dl>
-                    <dt>消费</dt>
-                    <dd>156522元</dd>
-                </dl>
-                <dl>
-                    <dt>日期</dt>
-                    <dd>2016-08-08</dd>
-                </dl>
-            </div>
+                <table class="logtable" style="width: 750px">
+                    <tbody><tr><th width="7%">编号</th><th width="15%">卡号</th><th width="15%">手机</th><th width="15%">姓名</th><th width="6%">类型</th><th width="21%">金额</th><th width="15%">日期</th><th width="6%">打印</th>
+
+                    </tr></tbody>
+                    <tbody id="logList" style="width: 750px">
+                    <tr>
+                        <td>4357</td><td>888</td> <td>15684004672</td> <td>zjf</td> <td style="color:green">充值</td> <td style="color:green">1200.00</td><td>2016-09-27 10:51:52</td> <td><a href="#" id="tz">打印</a></td> </tr><tr><td>4355</td><td>888</td> <td>15684004672</td> <td>zjf</td> <td style="color:green">充值</td> <td style="color:green">10000.00</td><td>2016-09-27 10:38:17</td> <td><a href="index.php?act=print&amp;sysId=4355">打印</a></td> </tr><tr><td>4347</td><td>888</td> <td>15684004672</td> <td>zjf</td> <td style="color:green">充值</td> <td style="color:green">5000.00</td><td>2016-09-26 17:31:33</td> <td><a href="index.php?act=print&amp;sysId=4347">打印</a></td> </tr><tr><td>4346</td><td>888</td> <td>15684004672</td> <td>zjf</td> <td style="color:red">消费</td> <td style="color:red">-500.00(现金500.00)</td><td>2016-09-26 17:30:19</td> <td><a href="index.php?act=print&amp;sysId=4346">打印</a></td> </tr><tr><td>4345</td><td>888</td> <td>15684004672</td> <td>zjf</td> <td style="color:green">充值</td> <td style="color:green">5000.00</td><td>2016-09-26 17:27:28</td> <td><a href="index.php?act=print&amp;sysId=4345">打印</a></td> </tr><tr><td>4344</td><td>54521</td> <td>15600001234</td> <td>zjf</td> <td style="color:green">充值</td> <td style="color:green">5000.00</td><td>2016-09-26 17:26:19</td> <td><a href="index.php?act=print&amp;sysId=4344">打印</a></td> </tr></tbody>
+
+                </table>
+
+                <script>
+
+                </script>
+
+
+
+
+
+            </div>-->
+            <br>
         </form>
     </div>
-
-    <div class="right">
-        <div class="top">
-            <h2>会员信息</h2>
-        </div>
-        <ul>
-            <li>会员姓名：<span>zjf</span></li>
-            <li>登录时间：<span></span></li>
-            <li>消费金额：<span></span></li>
-        </ul>
-        <div id="calendar"></div>
-        <div class="text">
-            <p>欢迎使用御苻酒店系统平台</p><br>
-            <p>电话：0000000</p>
-        </div>
-    </div>
-</div>
 <script>
     $(function(){
-        $('.nav>ul>li').on('click',function(){
-            $(this).addClass('active').siblings().removeClass('active')
-            var index = $(this).index()
-            $('.footer>form').eq(index).css('display','block').siblings().css('display','none')
-            $('.nav li a').addClass('public').parent().siblings().children().find(a).removeClass('public');
+        $('.top-nav li>a').on('click',function () {
+            $(this).addClass('message').parent().siblings().children().removeClass('message')
         })
     })
 </script>
+    <div class="right">
+        <div class="top">
+            <h2>欢迎使用</h2>
+        </div>
+        <ul>
+            <li>会员姓名：<span>zjf</span></li>
+
+            <li>登录时间：<span>2016-09-27 11:06:18</span></li>
+            <li>登录&nbsp;&nbsp;I&nbsp;P：<span>192.168.0.104</span></li>
+
+            <li><a href="index.php?act=logout">退出</a>&nbsp;&nbsp;&nbsp;<!--<a href="index.php?act=logout">锁屏</a>--></li>
+        </ul>
+        <div id="calendar"></div>
+        <div class="text">
+            <p>欢迎使用御茯酒店系统平台</p><br>
+            <p>电话：4000-80000</p>
+        </div>
+
+    </div>
+</div>
+<script src="./date/jquery.datetimepicker.full.js"></script>
+<script type="text/javascript">
+
+
+
+    /**
+     * @date 20160922
+     * @link http://www.jnkmall.com/
+     * @author WangZhiqiang<15522280@qq.com>
+     * @version 1.0
+     * @copyright © 2016, jnkmall. All rights reserved.
+     * @param string $username
+     * @todo 御茯国际酒店会员卡系统-全端验证
+     *
+     */
+    /**
+     * ============================================================================
+     * 日历
+     * ============================================================================
+     */
+
+
+    $.datetimepicker.setLocale('ch');//设置中文
+    $('#logStartTime').datetimepicker({lang:'ch'});
+    $('#logEndTime').datetimepicker({lang:'ch'});
+    $(document).ready(function () {
+
+        $('#calendar').eCalendar();
+    });
+
+    function changeNowRechargePrice() {
+        var a    = $("#rechargeOriPrice").val();
+        var b    = $("#rechargePrice").val();
+        var abc = parseFloat(a) + parseFloat(b);
+        var abc = parseFloat(abc);
+        if(isNaN(abc)){
+            $("#nowRechargePrice").val(0);
+        }else{
+            $("#nowRechargePrice").val(abc);
+        }
+
+
+    }
+    function changeConsumePrice(){
+        var a    = $("#consumeOriPrice").val();
+        var b    = $("#consumePrice").val();
+        var c    = $("#consumeCashPrice").val();
+        var abc = parseFloat(a) - parseFloat(b);
+        var abc = parseFloat(abc);
+
+        var abcd = parseFloat(b) + parseFloat(c);
+        var abcd = parseFloat(abcd);
+        if(typeof(abc) == 'number'  && abc>0){
+
+            $("#consumeCruSum").html(abc);
+        }
+        else{
+            $("#consumeCruSum").html('0');
+
+        }
+        if(typeof(abcd) == 'number'  ){
+            $("#consumeTotalPrice").html(abcd);
+        }else{
+
+            $("#consumeTotalPrice").html(abcd);
+        }
+
+    }
+    function changeConsumeCashPrice(){
+        var a    = $("#consumeCashPrice").val();
+        var b    = $("#consumePrice").val();
+        var abc = parseFloat(a)+ parseFloat(b);
+        var abc = parseFloat(abc);
+
+        $("#consumeTotalPrice").html(abc);
+    }
+
+    /**
+     * ============================================================================
+     * 表单验证
+     * ============================================================================
+     */
+    $(function(){
+        //消费
+
+
+        //充值
+
+
+
+        //办卡换卡
+
+        //日志
+
+
+
+    });
+
+
+    function logFormSubmit(){
+
+
+        $.ajax({
+            type: 'POST',
+            url: 'index.php?act=doLog',
+            dataType: 'json',
+            data: {
+                logCardId:$("#logCardId").val(),
+                logTel:$("#logTel").val(),
+                logNames:$("#logNames").val(),
+                logStartTime:$("#logStartTime").val(),
+                logEndTime:$("#logEndTime").val(),
+
+            },
+            beforeSend: function(){
+                $('#logList').html( "<tr><td></td><td></td> <td></td> <td>正在处理，请稍等！</td> <td></td> <td></td><td></td> </tr>");
+
+            },
+            success: function(data){
+                if(data){
+                    var result = "";
+                    for(var i=0; i<data.lists.length; i++){
+                        result+=  "<tr>" +
+                                "<td>"+data.lists[i].log_id+"</td>" +
+                                "<td>"+data.lists[i].card_no+"</td> " +
+                                "<td>"+data.lists[i].mobile+"</td> " +
+                                "<td>"+data.lists[i].name+"</td> " +
+                                "<td style='color:"+data.lists[i].colors+"'>"+data.lists[i].moneyType+"</td> " +
+                                "<td style='color:"+data.lists[i].colors+"'>"+data.lists[i].user_money+data.lists[i].cashPriceText+"</td>" +
+                                "<td>"+data.lists[i].change_time+"</td> " +
+                                "<td><a href='index.php?act=print&sysId="+data.lists[i].log_id+"'>打印</a></td> " +
+                                "</tr>";
+                    }
+                    $('#logList').html(result);
+
+                }else{
+                    $('#logList').html( "<tr><td></td><td></td> <td></td> <td>暂无相关数据</td> <td></td> <td></td><td></td> </tr>");
+                }
+
+
+
+
+
+
+            },
+            error: function(xhr, type){
+
+            }
+        });
+
+
+
+
+    }
+</script>
+
+
+
+
 </body>
 </html>
